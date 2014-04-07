@@ -25,19 +25,15 @@
 		 
 			//Social Media Icons
 			 wp_nav_menu( array( 
-				'theme_location' => 'socialmedia_links', 
+				'theme_location' => 'social_media', 
 				'menu_class' => '', 
 				'fallback_cb' => 'foundation_page_menu', 
 				'container' => 'nav', 
 				'container_class' => 'two column iconfont hide-for-small', 
 				'container_id'	=> 'social-media',
-				'items_wrap' => '%3$s'
+				'items_wrap' => '%3$s',
 				'walker' => new social_media_menu() ) ); 
 		?>
-		<nav class="two column iconfont hide-for-small" id="social-media">
-			<a href="http://facebook.com/jhuksas" title="Facebook"><span class="icon-facebook"></span><span class="hide">Facebook</span></a>
-			<a href="http://vimeo.com/channels/jhuksas" title="Vimeo"><span class="icon-vimeo"></span><span class="hide">Vimeo</span></a>
-		</nav>
 		
 		<!-- Copyright and Address -->
 		<div class="row" id="copyright" role="content-info">

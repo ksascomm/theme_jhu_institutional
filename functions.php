@@ -1,5 +1,6 @@
 <?php
 //Check to see if global plugins is active
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
 if(!is_plugin_active('ksas-global-functions/ksas-global-functions.php')) {
 		remove_action('wp_head', 'rsd_link');
 		remove_action('wp_head', 'wp_generator');
@@ -249,7 +250,7 @@ function delete_academic_open_transients($post_id) {
 	}
 	switch($post_type) {
 		case 'post' :
-			for ($i=1; $i < 5; $i++)
+			for ($i=1; $i < 5; $i++) {
 			      delete_transient('news_archive_query_' . $i); }
 			   
 			delete_transient('news_query');
@@ -285,11 +286,12 @@ function delete_academic_open_transients($post_id) {
 		      parent::start_el(&$output, $item, $depth, $args);
 		
 		      // no point redefining this method too, we just replace the li tag...
-		      $output = str_replace('<li', '<a href="'. esc_attr( $item->url) .'"><span class="icon-'. $item->title .'"></span><span class="hide">' . $item->title, $output);
+		      $output = '<a href="'. esc_attr( $item->url) . '"><span class="icon-'. $item->title .'"></span><span class="hide">' . $item->title . '</span></a>';
+
 		    }
 		
 		    function end_el(&$output, $item, $depth){
-		      $output .= "</span></a>\n"; // replace closing </li> with the option tag
+		      $output .= ''; // replace closing </li> with the option tag
 		    }
 		}
 
