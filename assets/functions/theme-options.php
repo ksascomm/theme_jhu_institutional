@@ -135,7 +135,16 @@ function flagship_sub_options_page_fields() {
 		"title"   => __( 'Filter by Expertise', 'flagship_sub_textdomain' ),
 		"desc"    => __( 'Do you want to be able to filter by expertise/research area?', 'flagship_sub_textdomain' ),
 		"type"    => "checkbox",
-		"std"    => "0");		
+		"std"    => "0");	
+	$options[13] =
+	array (		
+		"section" => "homepage_section",
+		"id"      => FLAGSHIP_SUB_SHORTNAME . "_color_scheme",
+		"title"   => __( 'Color Scheme', 'flagship_sub_textdomain' ),
+		"desc"    => __( 'Choose your theme color scheme', 'flagship_sub_textdomain' ),
+		"type"    => "select",
+		"choices" => array('blue','orange','green','purple','red','mint', 'babyblue','navy','lavender','armygreen','slate', 'plum','grass','forest','gold','sienna'),
+		"std"    => "blue");
 		return $options;
 		
 }

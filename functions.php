@@ -141,6 +141,29 @@ if(!is_plugin_active('ksas-global-functions/ksas-global-functions.php')) {
 		}
 		
 		add_filter('wp_page_menu','foundation_page_menu_class');
+		
+			function ksas_quicksearch_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( 
+			array(  
+				'label'            => 'Quick Search', 
+				'placeholder'       => 'Search by author, title, or keyword', 
+			), $atts )
+		); 
+		echo '<div id="fields_search">
+			<form action="#">
+				<fieldset class="radius10">
+					<div class="row">
+						<h6>' . $label . ':</h6>
+					</div>
+					<div class="row">		
+					<input type="submit" class="icon-search" placeholder="' . $placeholder . '" value="&#xe004;" /><input type="text" name="search" id="quicksearch" /> 	 
+					</div>
+				</fieldset>
+			</form>	
+		</div>';
+	}
+	add_shortcode( "quicksearch", "ksas_quicksearch_shortcode" );
+
 
 }
 //Add Theme Options Page
@@ -163,7 +186,7 @@ if(!is_plugin_active('ksas-global-functions/ksas-global-functions.php')) {
 function academic_flagship_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
-	add_image_size( 'rss', 300, 150, true );
+	add_image_size( 'rss', 410, 175, true );
 	add_image_size( 'directory', 90, 130, true );
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
 	$bg_args = array(
@@ -267,6 +290,10 @@ function delete_academic_open_transients($post_id) {
 			delete_transient('ksas_profile_undergrad_query');
 			delete_transient('ksas_profile_grad_query');
 			delete_transient('ksas_profile_spotlight_query');
+		break;
+		case 'programs' :
+			delete_transient('flagship_programs_query');
+		break;
 	}
 }
 	add_action('save_post','delete_academic_open_transients');
@@ -294,5 +321,6 @@ function delete_academic_open_transients($post_id) {
 		      $output .= ''; // replace closing </li> with the option tag
 		    }
 		}
+	include_once (TEMPLATEPATH . '/assets/functions/post-type-grad-programs.php'); 
 
 ?>

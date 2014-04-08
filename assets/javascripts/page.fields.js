@@ -1400,9 +1400,6 @@
 
 })( window, jQuery );
 
-
-
-//***********QUICKSEARCH*****************
 (function($, window, document, undefined) {
 	$.fn.quicksearch = function (target, opt) {
 		
@@ -1585,17 +1582,19 @@
 
 }(jQuery, this, document));
 
-//***********DIRECTORY SCRIPTS***********
+//***********FIELDS OF STUDY SCRIPTS***********
 var $j = jQuery.noConflict();
-$j(document).ready(function(){
+
+$j(function() {
 	//set isotope variables
-   var $container = $j('#directory');
-   filters = {};
+   var $container = $j('#fields_container'),
+   		filters = {};
 
    $container.isotope({
-        itemSelector: '.person',
-        layoutMode : 'fitRows'
+        itemSelector: '.mobile-field',
+        layoutMode : 'masonry'
     });
+
     // filter buttons
     $j('.filter .button a').click(function(){
       var $this = $j(this);
@@ -1624,7 +1623,7 @@ $j(document).ready(function(){
       return false;
     });
 	//Setup quicksearch
-    $j('#id_search').quicksearch('li.person', {
+    $j('#id_search').quicksearch('div.mobile-field', {
     	delay: 100,
     	bind: 'onchange keyup',
 		noResults: '#noresults',
@@ -1639,7 +1638,4 @@ $j(document).ready(function(){
             $container.isotope({ filter: '.quicksearch-match' }).isotope(); 
         }, 100 );
     });
-    
-
-
-});
+  });

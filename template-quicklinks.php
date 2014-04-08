@@ -4,8 +4,8 @@ Template Name: Quicklinks Listing
 */
 ?>	
 <?php get_header(); ?>
-<div class="row sidebar_bg radius10" id="page">
-	<div class="eight columns wrapper radius-left offset-topgutter">	
+<div class="row sidebar_bg" id="page">
+	<div class="eight columns wrapper offset-topgutter">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<section class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

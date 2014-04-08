@@ -39,7 +39,17 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	    });
 	</script>
 
-<?php } ?>
+<?php } if ( is_page_template( 'template-fieldsofstudy.php' ) )  { ?>
+  	<script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/page.fields.js"></script>
+  	<script>
+	    var $j = jQuery.noConflict();
+	    $j(window).load(function() {
+	        var filterFromQuerystring = getParameterByName('filter');
+	        $j('.filter a[data-filter=".' + filterFromQuerystring  + '"]').click();
+	    });
+	</script>
+
+<?php } ?> ?>
 
 <!***********SINGLE ITEMS (NEWS & PEOPLE_**************>
 <?php 

@@ -14,7 +14,6 @@
   <!-- CSS Files: All pages -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/min.foundation.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/flagship.css">
-<!--   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/pilot.css"> -->
   <script async type="text/javascript" src="http://fast.fonts.net/jsapi/c5f514c7-d786-4bfb-9484-ea6c8fbd263f.js"></script>
   <!-- CSS Files: Conditionals -->
   
@@ -32,10 +31,11 @@
   <?php include_once("parts-analytics.php"); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<header class="black_bg">
+<?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; ?>
+<body <?php body_class($color_scheme); ?>>	
+	<header>
 		<div class="row show-for-small">
-			<div class="four columns centered black_bg">
+			<div class="four columns centered black_bg" id="mobile-head">
 			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>">Home</a></div>
 			<h2 class="white" align="center"><?php echo get_bloginfo( 'title' ); ?></h2>
 			</div>

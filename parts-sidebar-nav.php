@@ -15,7 +15,7 @@
 				     //If there are no ancestors display a menu of children
 							if (count($ancestors) >= 1) {	?>						
 							<div class="offset-gutter" id="sidebar_header">
-								<h5 class="grey">Also in <a href="<?php echo $ancestor_url;?>" class="black bold"><?php echo $ancestor_title ?></a></h5>
+								<h5 class="grey">Also in <a href="<?php echo $ancestor_url;?>" class="white bold"><?php echo $ancestor_title ?></a></h5>
 							</div>
 							<?php
 								wp_nav_menu( array( 
@@ -42,7 +42,7 @@
 									'theme_location' => 'main_nav', 
 									'menu_class' => 'nav',
 									'container_class' => 'offset-gutter',
-									'items_wrap' =>  '<div id="sidebar_header"><h5 class="grey">Also in <span class="black bold">' . $page_name . '</span></h5></div><ul class="%2$s">%3$s</ul>',				
+									'items_wrap' =>  '<div id="sidebar_header"><h5 class="grey">Also in <span class="white bold">' . $page_name . '</span></h5></div><ul class="%2$s">%3$s</ul>',				
 									'submenu' => $page_name,
 									'depth' => 1,
 									'echo' => true
