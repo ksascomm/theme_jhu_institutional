@@ -2,21 +2,30 @@
 
 $page_sidebar_metabox = array( 
 	'id' => 'page_sidebar_meta',
-	'title' => 'Sidebar Content',
+	'title' => 'Sidebar',
 	'page' => array('page'),
-	'context' => 'normal',
+	'context' => 'side',
 	'priority' => 'high',
 	'fields' => array(
 
 				array(
 					'name' 			=> 'Sidebar Content',
-					'desc' 			=> 'This content will display in the sidebar on this page ONLY.  Please set section titles as [sidebar-title]Heading Name[/sidebar-title]',
+					'desc' 			=> 'Choose which sidebar you would like to display if you are using the Page with Sidebar template',
 					'id' 			=> 'ecpt_page_sidebar',
 					'class' 		=> 'ecpt_page_sidebar',
-					'type' 			=> 'textarea',
-					'rich_editor' 	=> 1,			
+					'type' 			=> 'select',
+					'options' => array(	"",
+										"homepage-sb",
+										"sidebar-1",
+										"sidebar-2",
+										"sidebar-3",
+										"sidebar-4",
+										"sidebar-5",
+										"sidebar-6",
+										"sidebar-7",
+										),
 					'max' 			=> 0,
-					'std'			=> ''													
+					'std'			=> ''				
 				),
 				
 
@@ -29,7 +38,7 @@ function ecpt_add_page_sidebar_meta_box() {
 	global $page_sidebar_metabox;		
 
 	foreach($page_sidebar_metabox['page'] as $page) {
-		add_meta_box($page_sidebar_metabox['id'], $page_sidebar_metabox['title'], 'ecpt_show_page_sidebar_box', $page, 'normal', 'default', $page_sidebar_metabox);
+		add_meta_box($page_sidebar_metabox['id'], $page_sidebar_metabox['title'], 'ecpt_show_page_sidebar_box', $page, 'side', 'default', $page_sidebar_metabox);
 	}
 }
 
@@ -54,32 +63,12 @@ function ecpt_show_page_sidebar_box()	{
 				'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 				'<td class="ecpt_field_type_' . str_replace(' ', '_', $field['type']) . '">';
 		switch ($field['type']) {
-			case 'text':
-				echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" /><br/>', '', $field['desc'];
-				break;
-			case 'textarea':
-			
-				if($field['rich_editor'] == 1) {
-					echo $field['desc'];
-
-					if($wp_version >= 3.3) {
-						echo wp_editor($meta, $field['id'], array('textarea_name' => $field['id'], 'wpautop' => false));
-					} else {
-						// older versions of WP
-						$editor = '';
-						if(!post_type_supports($post->post_type, 'editor')) {
-							$editor = wp_tiny_mce(true, array('editor_selector' => $field['class'], 'remove_linebreaks' => false) );
-						}
-						$field_html = '<div style="width: 97%; border: 1px solid #DFDFDF;"><textarea name="' . $field['id'] . '" class="' . $field['class'] . '" id="' . $field['id'] . '" cols="60" rows="8" style="width:100%">'. $meta . '</textarea></div><br/>' . __($field['desc']);
-						echo $editor . $field_html;
-					}
-				} else {
-					echo '<div style="width: 100%;"><textarea name="', $field['id'], '" class="', $field['class'], '" id="', $field['id'], '" cols="60" rows="8" style="width:97%">', $meta ? $meta : $field['std'], '</textarea></div>', '', $field['desc'];				
+			case 'select':
+				echo '<select name="', $field['id'], '" id="', $field['id'], '">';
+				foreach ($field['options'] as $option) {
+					echo '<option value="' . $option . '"', $meta == $option ? ' selected="selected"' : '', '>', $option, '</option>';
 				}
-				
-				break;
-			case 'upload':
-				echo '<input type="text" class="ecpt_upload_field" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:80%" /><input class="ecpt_upload_image_button" type="button" value="Upload" /><br/>', '', $field['desc'];
+				echo '</select>', '', stripslashes($field['desc']);
 				break;
 		}
 		echo     '<td>',

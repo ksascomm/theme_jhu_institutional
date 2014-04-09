@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Mini Homepage
+Template Name: Page with Sidebar
 */
 ?>	
 

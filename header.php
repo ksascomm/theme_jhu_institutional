@@ -28,7 +28,7 @@
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/lte-ie7.js"></script>
   <![endif]-->
-  <?php include_once("parts-analytics.php"); ?>
+  <?php get_template_part('parts', 'analytics'); ?>
 </head>
 
 <?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; ?>

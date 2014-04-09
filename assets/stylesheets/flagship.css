@@ -1436,7 +1436,7 @@ aside ul.nav li {
 }
 
 .widget_title h5 {
-	color:#FFF;
+	color:#FFF !important;
 }
 
 ul.nav li ul li {
@@ -1461,7 +1461,7 @@ ul.nav ul.sub-menu {
 
 #sidebar.sidebar-right {
 	padding-top:0;
-	background: #ccc;
+	background: #e5e2e0;
 }
 #sidebar h5 {
 	padding-left:20px;

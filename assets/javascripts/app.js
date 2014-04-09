@@ -508,3 +508,10 @@ $j('#quicksearch').quicksearch('.accordion li', {
 					$j("ul.accordion li").addClass("active");
         }, 100 );
     });
+
+/****tertiary nav******/
+
+var $l = jQuery.noConflict();
+$l(document).ready(function() {
+$l('.nav-bar .has-flyout .flyout .has-flyout').hover(function() {$l(this).find('ul.flyout').show();}, function() {$l(this).find('ul.flyout').hide();});
+});
