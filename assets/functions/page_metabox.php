@@ -123,11 +123,4 @@ function ecpt_page_sidebar_save($post_id) {
 		}
 	}
 }
-
-
-//Add Widget Title shortcode
-function sidebar_title_shortcode( $attr, $content = null ) {
-  return '<div class="blue_bg widget_title offset-gutter"><h5 class="white">' . $content . '</h5></div>';
-}
-add_shortcode('sidebar-title', 'sidebar_title_shortcode');
 ?>

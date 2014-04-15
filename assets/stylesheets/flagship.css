@@ -117,30 +117,30 @@ body.purple header, body.purple #sidebar_header, body.purple #site_title, body.p
 }
 
 /*********COLORS-FONTS*************/
-body h1, body h2, body h3, body h4, body h5, body h6, body .semibold, body table thead tr th, body table tfoot tr td, body .sidebar_bg ul.nav li a, body #sidebar li a, body #sidebar li.external a::after {
+body h1, body h2, body h3, body h4, body h5, body h6, body .semibold, body table thead tr th, body table tfoot tr td, body .sidebar_bg ul.nav li a, body #sidebar li a, body #sidebar li.external a::after, .panel.callout a {
 	color: #2c2c33;
 }
-body.blue h1, body.blue h2, body.blue h3, body.blue h4, body.blue h5, body.blue h6, body.blue .semibold, body.blue table thead tr th, body.blue table tfoot tr td, body.blue a, body.blue .sidebar_bg ul.nav li a, body.blue #sidebar li a, body.blue #sidebar li.external a::after {
+body.blue h1, body.blue h2, body.blue h3, body.blue h4, body.blue h5, body.blue h6, body.blue .semibold, body.blue table thead tr th, body.blue table tfoot tr td, body.blue a, body.blue .sidebar_bg ul.nav li a, body.blue #sidebar li a, body.blue #sidebar li.external a::after, body.blue .panel.callout a {
 	color: #418FDE;
 }
 
-body.green h1, body.green h2, body.green h3, body.green h4, body.green h5, body.green h6, body.green .semibold, body.green table thead tr th, body.green table tfoot tr td, body.green a, body.green .sidebar_bg ul.nav li a, body.green #sidebar li a, body.green #sidebar li.external a::after {
+body.green h1, body.green h2, body.green h3, body.green h4, body.green h5, body.green h6, body.green .semibold, body.green table thead tr th, body.green table tfoot tr td, body.green a, body.green .sidebar_bg ul.nav li a, body.green #sidebar li a, body.green #sidebar li.external a::after, body.green .panel.callout a {
 	color: #007a53;
 }
 
-body.red h1, body.red h2, body.red h3, body.red h4, body.red h5, body.red h6, body.red .semibold, body.red table thead tr th, body.red table tfoot tr td, body.red a, body.red .sidebar_bg ul.nav li a, body.red #sidebar li a, body.red #sidebar li.external a::after {
+body.red h1, body.red h2, body.red h3, body.red h4, body.red h5, body.red h6, body.red .semibold, body.red table thead tr th, body.red table tfoot tr td, body.red a, body.red .sidebar_bg ul.nav li a, body.red #sidebar li a, body.red #sidebar li.external a::after, body.red .panel.callout a {
 	color: #8a2a2b;
 }
 
-body.orange h1, body.orange h2, body.orange h3, body.orange h4, body.orange h5, body.orange h6, body.orange .semibold, body.orange table thead tr th, body.orange table tfoot tr td, body.orange a, body.orange .sidebar_bg ul.nav li a, body.orange #sidebar li a, body.orange #sidebar li.external a::after {
+body.orange h1, body.orange h2, body.orange h3, body.orange h4, body.orange h5, body.orange h6, body.orange .semibold, body.orange table thead tr th, body.orange table tfoot tr td, body.orange a, body.orange .sidebar_bg ul.nav li a, body.orange #sidebar li a, body.orange #sidebar li.external a::after, body.orange .panel.callout a {
 	color: #cf4520;
 }
 
-body.mint h1, body.mint h2, body.mint h3, body.mint h4, body.mint h5, body.mint h6, body.mint .semibold, body.mint table thead tr th, body.mint table tfoot tr td, body.mint a, body.mint .sidebar_bg ul.nav li a, body.mint #sidebar li a, body.mint #sidebar li.external a::after {
+body.mint h1, body.mint h2, body.mint h3, body.mint h4, body.mint h5, body.mint h6, body.mint .semibold, body.mint table thead tr th, body.mint table tfoot tr td, body.mint a, body.mint .sidebar_bg ul.nav li a, body.mint #sidebar li a, body.mint #sidebar li.external a::after, body.mint .panel.callout a {
 	color: #00ab8e;
 }
 
-body.purple h1, body.purple h2, body.purple h3, body.purple h4, body.purple h5, body.purple h6, body.purple .semibold, body.purple table thead tr th, body.purple table tfoot tr td, body.purple a, body.purple .sidebar_bg ul.nav li a, body.purple #sidebar li a, body.purple #sidebar li.external a::after {
+body.purple h1, body.purple h2, body.purple h3, body.purple h4, body.purple h5, body.purple h6, body.purple .semibold, body.purple table thead tr th, body.purple table tfoot tr td, body.purple a, body.purple .sidebar_bg ul.nav li a, body.purple #sidebar li a, body.purple #sidebar li.external a::after, body.purple .panel.callout a {
 	color: #8e3a80;
 }
 
@@ -207,7 +207,7 @@ body.babyblue header, body.babyblue #sidebar_header, body.babyblue #site_title, 
 	background: #6399ae;
 }
 
-body.babyblue h1, body.babyblue h2, body.babyblue h3, body.babyblue h4, body.babyblue h5, body.babyblue h6, body.babyblue .semibold, body.babyblue table thead tr th, body.babyblue table tfoot tr td, body.babyblue a, body.babyblue .sidebar_bg ul.nav li a, body.babyblue #sidebar li a, body.babyblue #sidebar li.external a::after {
+body.babyblue h1, body.babyblue h2, body.babyblue h3, body.babyblue h4, body.babyblue h5, body.babyblue h6, body.babyblue .semibold, body.babyblue table thead tr th, body.babyblue table tfoot tr td, body.babyblue a, body.babyblue .sidebar_bg ul.nav li a, body.babyblue #sidebar li a, body.babyblue #sidebar li.external a::after, body.babyblue .panel.callout a {
 	color: #6399ae;
 }
 
@@ -224,7 +224,7 @@ body.lavender header, body.lavender #sidebar_header, body.lavender #site_title, 
 	background: #86647a;
 }
 
-body.lavender h1, body.lavender h2, body.lavender h3, body.lavender h4, body.lavender h5, body.lavender h6, body.lavender .semibold, body.lavender table thead tr th, body.lavender table tfoot tr td, body.lavender a, body.lavender .sidebar_bg ul.nav li a, body.lavender #sidebar li a, body.lavender #sidebar li.external a::after {
+body.lavender h1, body.lavender h2, body.lavender h3, body.lavender h4, body.lavender h5, body.lavender h6, body.lavender .semibold, body.lavender table thead tr th, body.lavender table tfoot tr td, body.lavender a, body.lavender .sidebar_bg ul.nav li a, body.lavender #sidebar li a, body.lavender #sidebar li.external a::after, body.lavender .panel.callout a {
 	color: #86647a;
 }
 
@@ -241,7 +241,7 @@ body.navy header, body.navy #sidebar_header, body.navy #site_title, body.navy .w
 	background: #003d4c;
 }
 
-body.navy h1, body.navy h2, body.navy h3, body.navy h4, body.navy h5, body.navy h6, body.navy .semibold, body.navy table thead tr th, body.navy table tfoot tr td, body.navy a, body.navy .sidebar_bg ul.nav li a, body.navy #sidebar li a, body.navy #sidebar li.external a::after {
+body.navy h1, body.navy h2, body.navy h3, body.navy h4, body.navy h5, body.navy h6, body.navy .semibold, body.navy table thead tr th, body.navy table tfoot tr td, body.navy a, body.navy .sidebar_bg ul.nav li a, body.navy #sidebar li a, body.navy #sidebar li.external a::after, body.navy .panel.callout a {
 	color: #003d4c;
 }
 
@@ -258,7 +258,7 @@ body.armygreen header, body.armygreen #sidebar_header, body.armygreen #site_titl
 	background: #4e5b31;
 }
 
-body.armygreen h1, body.armygreen h2, body.armygreen h3, body.armygreen h4, body.armygreen h5, body.armygreen h6, body.armygreen .semibold, body.armygreen table thead tr th, body.armygreen table tfoot tr td, body.armygreen a, body.armygreen .sidebar_bg ul.nav li a, body.armygreen #sidebar li a, body.armygreen #sidebar li.external a::after {
+body.armygreen h1, body.armygreen h2, body.armygreen h3, body.armygreen h4, body.armygreen h5, body.armygreen h6, body.armygreen .semibold, body.armygreen table thead tr th, body.armygreen table tfoot tr td, body.armygreen a, body.armygreen .sidebar_bg ul.nav li a, body.armygreen #sidebar li a, body.armygreen #sidebar li.external a::after, body.armygreen .panel.callout a {
 	color: #4e5b31;
 }
 
@@ -275,7 +275,7 @@ body.slate header, body.slate #sidebar_header, body.slate #site_title, body.slat
 	background: #4a484c;
 }
 
-body.slate h1, body.slate h2, body.slate h3, body.slate h4, body.slate h5, body.slate h6, body.slate .semibold, body.slate table thead tr th, body.slate table tfoot tr td, body.slate a, body.slate .sidebar_bg ul.nav li a, body.slate #sidebar li a, body.slate #sidebar li.external a::after {
+body.slate h1, body.slate h2, body.slate h3, body.slate h4, body.slate h5, body.slate h6, body.slate .semibold, body.slate table thead tr th, body.slate table tfoot tr td, body.slate a, body.slate .sidebar_bg ul.nav li a, body.slate #sidebar li a, body.slate #sidebar li.external a::after, body.slate .panel.callout a {
 	color: #4a484c;
 }
 
@@ -292,7 +292,7 @@ body.plum header, body.plum #sidebar_header, body.plum #site_title, body.plum .w
 	background: #6f2c3f;
 }
 
-body.plum h1, body.plum h2, body.plum h3, body.plum h4, body.plum h5, body.plum h6, body.plum .semibold, body.plum table thead tr th, body.plum table tfoot tr td, body.plum a, body.plum .sidebar_bg ul.nav li a, body.plum #sidebar li a, body.plum #sidebar li.external a::after {
+body.plum h1, body.plum h2, body.plum h3, body.plum h4, body.plum h5, body.plum h6, body.plum .semibold, body.plum table thead tr th, body.plum table tfoot tr td, body.plum a, body.plum .sidebar_bg ul.nav li a, body.plum #sidebar li a, body.plum #sidebar li.external a::after, body.plum .panel.callout a {
 	color: #6f2c3f;
 }
 
@@ -309,7 +309,7 @@ body.grass header, body.grass #sidebar_header, body.grass #site_title, body.gras
 	background: #74aa50;
 }
 
-body.grass h1, body.grass h2, body.grass h3, body.grass h4, body.grass h5, body.grass h6, body.grass .semibold, body.grass table thead tr th, body.grass table tfoot tr td, body.grass a, body.grass .sidebar_bg ul.nav li a, body.grass #sidebar li a, body.grass #sidebar li.external a::after {
+body.grass h1, body.grass h2, body.grass h3, body.grass h4, body.grass h5, body.grass h6, body.grass .semibold, body.grass table thead tr th, body.grass table tfoot tr td, body.grass a, body.grass .sidebar_bg ul.nav li a, body.grass #sidebar li a, body.grass #sidebar li.external a::after, body.grass .panel.callout a {
 	color: #74aa50;
 }
 
@@ -325,7 +325,7 @@ body.forest header, body.forest #sidebar_header, body.forest #site_title, body.f
 	background: #007a53;
 }
 
-body.forest h1, body.forest h2, body.forest h3, body.forest h4, body.forest h5, body.forest h6, body.forest .semibold, body.forest table thead tr th, body.forest table tfoot tr td, body.forest a, body.forest .sidebar_bg ul.nav li a, body.forest #sidebar li a, body.forest #sidebar li.external a::after {
+body.forest h1, body.forest h2, body.forest h3, body.forest h4, body.forest h5, body.forest h6, body.forest .semibold, body.forest table thead tr th, body.forest table tfoot tr td, body.forest a, body.forest .sidebar_bg ul.nav li a, body.forest #sidebar li a, body.forest #sidebar li.external a::after, body.forest .panel.callout a {
 	color: #007a53;
 }
 
@@ -341,7 +341,7 @@ body.gold header, body.gold #sidebar_header, body.gold #site_title, body.gold .w
 	background: #cba052;
 }
 
-body.gold h1, body.gold h2, body.gold h3, body.gold h4, body.gold h5, body.gold h6, body.gold .semibold, body.gold table thead tr th, body.gold table tfoot tr td, body.gold a, body.gold .sidebar_bg ul.nav li a, body.gold #sidebar li a, body.gold #sidebar li.external a::after {
+body.gold h1, body.gold h2, body.gold h3, body.gold h4, body.gold h5, body.gold h6, body.gold .semibold, body.gold table thead tr th, body.gold table tfoot tr td, body.gold a, body.gold .sidebar_bg ul.nav li a, body.gold #sidebar li a, body.gold #sidebar li.external a::after, body.gold .panel.callout a {
 	color: #cba052;
 }
 
@@ -357,7 +357,7 @@ body.sienna header, body.sienna #sidebar_header, body.sienna #site_title, body.s
 	background: #9e5330;
 }
 
-body.sienna h1, body.sienna h2, body.sienna h3, body.sienna h4, body.sienna h5, body.sienna h6, body.sienna .semibold, body.sienna table thead tr th, body.sienna table tfoot tr td, body.sienna a, body.sienna .sidebar_bg ul.nav li a, body.sienna #sidebar li a, body.sienna #sidebar li.external a::after {
+body.sienna h1, body.sienna h2, body.sienna h3, body.sienna h4, body.sienna h5, body.sienna h6, body.sienna .semibold, body.sienna table thead tr th, body.sienna table tfoot tr td, body.sienna a, body.sienna .sidebar_bg ul.nav li a, body.sienna #sidebar li a, body.sienna #sidebar li.external a::after, body.sienna .panel.callout a {
 	color: #9e5330;
 }
 
@@ -670,16 +670,8 @@ ul.accordion .quicksearch-match {
 	background:#fc6;
 }
 
-.callout.panel a li,.callout.panel li a {
-	color:#2c2c33;
-}
-
 .callout.panel p,.callout.panel ul {
 	font-family:"Myriad W01 SmBd",Arial,sans-serif;
-}
-
-.callout.panel h3,.callout.panel li:before,.callout.panel a:hover {
-	color:#633;
 }
 
 .callout.panel h3 {
@@ -1623,6 +1615,9 @@ div.field {
 	background: #d9c89e;
 	background: rgba(217,200,158,.3);
 	padding: 25px 15px;;
+}
+div.field img {
+	height: 175px;
 }
 p.contact {
 	font-size:14px;

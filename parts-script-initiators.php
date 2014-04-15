@@ -47,14 +47,11 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 <?php } ?> ?>
 
 <!***********SINGLE ITEMS (NEWS & PEOPLE_**************>
-<?php 
+<?php if (  is_singular('post') ) { 
 	$about_id = ksas_get_page_id('about');
 	$archive_id = ksas_get_page_id('archive');
-	$people_id = ksas_get_page_id('people'); 
-	if (empty($people_id) == true ) { $people_id = ksas_get_page_id('directoryindex'); }
-	$faculty_id = ksas_get_page_id('faculty');
+
 ?>
-<?php if (  is_singular('post') ) { ?>
 	<script>
 		var $j = jQuery.noConflict();
 		$j(document).ready(function(){
@@ -64,7 +61,11 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	</script>
 <?php } ?>
 
-<?php if ( is_singular('people') ) { ?>
+<?php if ( is_singular('people') ) { 
+	$people_id = ksas_get_page_id('people'); 
+	if (empty($people_id) == true ) { $people_id = ksas_get_page_id('directoryindex'); }
+	$faculty_id = ksas_get_page_id('faculty');
+?>
 	<script>
 		var $k = jQuery.noConflict();
 		$k(document).ready(function(){
@@ -93,8 +94,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 <?php } ?> 
 
 <!***********EVENT CALENDAR**************>
-<?php $theme_option = flagship_sub_get_global_options();
-if ( is_page_template( 'template-calendar.php' ))  { ?>   				
+<?php if ( is_page_template( 'template-calendar.php' ))  { $theme_option = flagship_sub_get_global_options(); ?>   				
 	<script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/min.easyXDM.js"></script>
 	<?php $calendar_url = $theme_option['flagship_sub_calendar_address'];
 		$url_for_script = "http://krieger.jhu.edu/calendar/calendar_holder.html?url=" . $calendar_url . "/"; ?>
@@ -113,8 +113,7 @@ if ( is_page_template( 'template-calendar.php' ))  { ?>
 <?php } ?>
 
 <!***********EVENT CALENDAR - MOBILE**************>
-<?php $theme_option = flagship_sub_get_global_options();
-if ( is_page_template( 'template-calendar-mobile.php' ))  { ?>   				
+<?php if ( is_page_template( 'template-calendar-mobile.php' ))  { $theme_option = flagship_sub_get_global_options(); ?>   				
 	<script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/min.easyXDM.js"></script>
 	<?php $calendar_url = $theme_option['flagship_sub_calendar_address'];
 		$url_for_script = "http://krieger.jhu.edu/calendar/calendar_holder.html?url=" . $calendar_url . "/list/bymonth"; ?>
