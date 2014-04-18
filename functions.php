@@ -1,177 +1,23 @@
 <?php
-//Check to see if global plugins is active
-if(!is_plugin_active('ksas-global-functions/ksas-global-functions.php')) {
-		remove_action('wp_head', 'rsd_link');
-		remove_action('wp_head', 'wp_generator');
-		remove_action('wp_head', 'feed_links', 2);
-		remove_action('wp_head', 'index_rel_link');
-		remove_action('wp_head', 'wlwmanifest_link');
-		remove_action('wp_head', 'feed_links_extra', 3);
-		remove_action('wp_head', 'start_post_rel_link', 10, 0);
-		remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-		remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
-	
-		//remove version info from head and feeds
-		    function complete_version_removal() {
-		    	return '';
-		    }
-		    add_filter('the_generator', 'complete_version_removal');
-	
-		//***8.4 Get page ID from page slug - Used to generate left side nav on some pages
-		function ksas_get_page_id($page_name){
-			global $wpdb;
-			$page_name = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."'");
-			return $page_name;
-		}
-
-
-	//***8.8 Create Title for <head> section
-		function create_page_title() {
-			if ( is_front_page() )  { 
-				$page_title = bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-				} 
-			
-			elseif ( is_category() ) { 
-				$page_title = single_cat_title();
-				$page_title .= print(' | ');
-				$page_title .= bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-		 
-				}
-		
-			elseif (is_single() ) { 
-				$page_title = single_post_title(); 
-				$page_title .= print(' | ');
-				$page_title .= bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-				}
-		
-			elseif (is_page() ) { 
-				$page_title = single_post_title();
-				$page_title .= print(' | ');
-				$page_title .= bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-			}
-			elseif (is_404()) {
-				$page_title = print('Page Not Found'); 
-				$page_title .= print(' | ');
-				$page_title .= bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-			}
-			else { 
-				$page_title = bloginfo('description');
-				$page_title .= print(' '); 
-				$page_title .= bloginfo('name');
-				$page_title .= print(' | Johns Hopkins University'); 
-				} 
-			return $page_title;
-		}
-	//***9.1 Menu Walker to add Foundation CSS classes
-		class foundation_navigation extends Walker_Nav_Menu
-		{
-		      function start_el(&$output, $item, $depth, $args)
-		      {
-					global $wp_query;
-					$indent = ( $depth ) ? str_repeat( "", $depth ) : '';
-					
-					$class_names = $value = '';
-					
-					// If the item has children, add the dropdown class for bootstrap
-					if ( $args->has_children ) {
-						$class_names = "has-flyout ";
-					}
-					$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-					
-					$class_names .= join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-					$class_names = ' class="'. esc_attr( $class_names ) . ' page-id-' . esc_attr( $item->object_id ) .'"';
-		           
-					$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
-		           
-		
-		           	$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		           	$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		           	$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-		           	$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-		           	// if the item has children add these two attributes to the anchor tag
-		           	if ( $args->has_children ) {
-						$attributes .= 'data-toggle="dropdown"';
-					}
-		
-		            $item_output = $args->before;
-		            $item_output .= '<a'. $attributes .'>';
-		            $item_output .= $args->link_before .apply_filters( 'the_title', $item->title, $item->ID );
-		            $item_output .= $args->link_after;
-		            $item_output .= '</a>';
-		            $item_output .= $args->after;
-		
-		            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-		            }
-		            
-		function start_lvl(&$output, $depth) {
-			$output .= "\n<ul class=\"flyout up\">\n";
-		}
-		            
-		      	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output )
-		      	    {
-		      	        $id_field = $this->db_fields['id'];
-		      	        if ( is_object( $args[0] ) ) {
-		      	            $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-		      	        }
-		      	        return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-		      	    }
-		      	
-		            
-		}
-		
-		// Add a class to the wp_page_menu fallback
-		function foundation_page_menu_class($ulclass) {
-			return preg_replace('/<ul>/', '<ul class="nav-bar">', $ulclass, 1);
-		}
-		
-		add_filter('wp_page_menu','foundation_page_menu_class');
-
-}
 //Add Theme Options Page
 	if(is_admin()){	
 		require_once('assets/functions/theme-options-init.php');
 	}
 	
-	//Collect current theme option values
-		function flagship_sub_get_global_options(){
-			$flagship_sub_option = array();
-			$flagship_sub_option 	= get_option('flagship_sub_options');
-		return $flagship_sub_option;
-		}
+//Function to call theme option values
+	function flagship_sub_get_global_options(){
+		$flagship_sub_option = array();
+		$flagship_sub_option 	= get_option('flagship_sub_options');
+	return $flagship_sub_option;
+	}
 	
-	//Function to call theme options in theme files 
-		$flagship_sub_option = flagship_sub_get_global_options();
-
-//Add custom background option
-	
+// Initiate Theme Support
 function academic_flagship_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 125, 125, true );   // default thumb size
-	add_image_size( 'rss', 300, 150, true );
+	add_image_size( 'rss', 410, 175, true );
 	add_image_size( 'directory', 90, 130, true );
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
-	$bg_args = array(
-		'default-color'          => '#e2e1df',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
-	);
-	add_theme_support( 'custom-background', $bg_args  );
 	add_theme_support( 'menus' );            
 	register_nav_menus(                      
 		array( 
@@ -183,33 +29,78 @@ function academic_flagship_theme_support() {
 		)
 	);	
 }
-
-// Initiate Theme Support
 add_action('after_setup_theme','academic_flagship_theme_support');
 
 //Register Sidebars
-	if ( function_exists('register_sidebar') )
-		register_sidebar(array(
-			'name'          => 'Default Sidebar',
-			'id'            => 'page-sb',
-			'description'   => 'This is the default sidebar',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<div class="blue_bg widget_title"><h5 class="white">',
-			'after_title'   => '</h5></div>' 
-			));
-	if ( function_exists('register_sidebar') )
-		register_sidebar(array(
-			'name'          => 'Homepage Sidebar',
-			'id'            => 'homepage-sb',
-			'description'   => 'This sidebar will only appear on the homepage',
-			'before_widget' => '<div id="widget" class="widget %2$s row">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<div class="blue_bg widget_title"><h5 class="white">',
-			'after_title'   => '</h5></div>' 
-			));
+function ksas_widget_init() {
 
-	include_once (TEMPLATEPATH . '/assets/functions/page_metabox.php'); 
+        register_sidebar( array(
+					 'name' => 'Homepage Sidebar',
+					   'id' => 'homepage-sb',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 1',
+					   'id' => 'sidebar-1',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 2',
+					   'id' => 'sidebar-2',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 3',
+					   'id' => 'sidebar-3',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 4',
+					   'id' => 'sidebar-4',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 5',
+					   'id' => 'sidebar-5',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 6',
+					   'id' => 'sidebar-6',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+        register_sidebar( array(
+					 'name' => 'Sidebar 7',
+					   'id' => 'sidebar-7',			
+			'before_widget' => '<div id="widget" class="widget %2$s row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="widget_title"><h5>',
+			'after_title'   => '</h5></div>', 
+			));
+}
+add_action( 'widgets_init', 'ksas_widget_init' );
+include_once (TEMPLATEPATH . '/assets/functions/page_metabox.php'); 
 
 function get_the_directory_filters($post) {
 	$directory_filters = get_the_terms( $post->ID, 'filter' );
@@ -238,7 +129,6 @@ function get_the_roles($post) {
 }
 
 /**********DELETE TRANSIENTS******************/
-
 function delete_academic_open_transients($post_id) {
 	global $post;
 	if (isset($_GET['post_type'])) {		
@@ -249,7 +139,7 @@ function delete_academic_open_transients($post_id) {
 	}
 	switch($post_type) {
 		case 'post' :
-			for ($i=1; $i < 5; $i++) 
+			for ($i=1; $i < 5; $i++) {
 			      delete_transient('news_archive_query_' . $i); }
 			   
 			delete_transient('news_query');
@@ -266,31 +156,83 @@ function delete_academic_open_transients($post_id) {
 			delete_transient('ksas_profile_undergrad_query');
 			delete_transient('ksas_profile_grad_query');
 			delete_transient('ksas_profile_spotlight_query');
+		break;
+		case 'programs' :
+			delete_transient('flagship_programs_query');
+		break;
 	}
 }
 	add_action('save_post','delete_academic_open_transients');
 	
 	//***9.2 Menu Walker to create social media icon menu	
-		class social_media_menu extends Walker_Nav_Menu{
-		    function start_lvl(&$output, $depth){
-		      $indent = str_repeat("\t", $depth); // don't output children opening tag (`<ul>`)
+		class social_media_menu extends Walker_Nav_Menu {
+		    function start_lvl(&$output, $depth = 0, $args = array()){
+		      $output = "<div>\n"; // don't output children opening tag (`<ul>`)
 		    }
 		
-		    function end_lvl(&$output, $depth){
-		      $indent = str_repeat("\t", $depth); // don't output children closing tag
+		    function end_lvl(&$output, $depth = 0, $args = array()){
+		      $output .= "/div>\n"; // don't output children closing tag
 		    }
 		
-		    function start_el(&$output, $item, $depth, $args){
-		
-		      parent::start_el(&$output, $item, $depth, $args);
-		
-		      // no point redefining this method too, we just replace the li tag...
-		      $output = str_replace('<li', '<a href="'. esc_attr( $item->url) .'"><span class="icon-'. $item->title .'"></span><span class="hide">' . $item->title, $output);
+		    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
+				$output .= '<a href="'. esc_attr( $item->url) . '"><span class="icon-'.esc_attr( $item->title) .'"></span><span class="hide">' . esc_attr($item->title);
 		    }
 		
-		    function end_el(&$output, $item, $depth){
-		      $output .= "</span></a>\n"; // replace closing </li> with the option tag
+		    function end_el(&$output, $item, $depth = 0, $args = array()){
+		      $output .= '</span></a>'; // replace closing </li> with the option tag
 		    }
 		}
-
+	include_once (TEMPLATEPATH . '/assets/functions/post-type-grad-programs.php'); 
+ 
+// add hook
+add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
+ 
+// filter_hook function to react on sub_menu flag
+function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
+  if ( isset( $args->sub_menu ) ) {
+    $root_id = 0;
+    
+    // find the current menu item
+    foreach ( $sorted_menu_items as $menu_item ) {
+      if ( $menu_item->current ) {
+        // set the root id based on whether the current menu item has a parent or not
+        $root_id = ( $menu_item->menu_item_parent ) ? $menu_item->menu_item_parent : $menu_item->ID;
+        break;
+      }
+    }
+    
+    // find the top level parent
+    if ( ! isset( $args->direct_parent ) ) {
+      $prev_root_id = $root_id;
+      while ( $prev_root_id != 0 ) {
+        foreach ( $sorted_menu_items as $menu_item ) {
+          if ( $menu_item->ID == $prev_root_id ) {
+            $prev_root_id = $menu_item->menu_item_parent;
+            // don't set the root_id to 0 if we've reached the top of the menu
+            if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
+            break;
+          } 
+        }
+      }
+    }
+ 
+    $menu_item_parents = array();
+    foreach ( $sorted_menu_items as $key => $item ) {
+      // init menu_item_parents
+      if ( $item->ID == $root_id ) $menu_item_parents[] = $item->ID;
+ 
+      if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
+        // part of sub-tree: keep!
+        $menu_item_parents[] = $item->ID;
+      } else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
+        // not part of sub-tree: away with it!
+        unset( $sorted_menu_items[$key] );
+      }
+    }
+    
+    return $sorted_menu_items;
+  } else {
+    return $sorted_menu_items;
+  }
+}
 ?>

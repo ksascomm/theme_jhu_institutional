@@ -4,7 +4,7 @@ Template Name: Search Results
 */
 ?>
 <?php
-require_once TEMPLATEPATH . "/assets/functions/GoogleSearch.php";
+require_once get_template_directory() . "/assets/functions/GoogleSearch.php";
 get_header(); 
 $theme_option = flagship_sub_get_global_options(); 
 $collection_name = $theme_option['flagship_sub_search_collection'];

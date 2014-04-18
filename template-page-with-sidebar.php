@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Mini Homepage
+Template Name: Page with Sidebar
 */
 ?>	
 
 <?php get_header(); ?>
-	<div class="row sidebar_bg radius10 two_side">
+	<div class="row sidebar_bg two_side">
 		<div class="nine columns wrapper push-three content">
 
 			<!---Page Content---->

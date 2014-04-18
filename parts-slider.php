@@ -7,7 +7,7 @@
 	} 	
 	if ( $slider_query->have_posts() ) :
 ?>
-<div class="blueslide hide-for-mobile">
+<div class="blueslide hide-for-mobile" id="slide">
 <div class="row">
 <div id="slider" class="no-gutter">
 <?php endif; ?>
@@ -19,7 +19,7 @@
 				<h3 class="white"><?php the_title(); ?></h3>
 				<h5 class="white"><?php echo get_the_content(); ?></h5>
 			   	<?php if ( get_post_meta($post->ID, 'ecpt_button', true) ) : ?>				
-					<div class="button <?php echo get_post_meta($post->ID, 'ecpt_slidecolor', true); ?>"><span class="uppercase">Find Out More</span></div>
+					<div class="button"><span class="uppercase">Find Out More</span></div>
 				<?php endif;?>
 			</div>
 	</summary>	

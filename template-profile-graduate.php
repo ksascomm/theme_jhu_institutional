@@ -5,7 +5,7 @@ Template Name: Profiles - Graduate
 ?>
 
 <?php get_header(); ?>
-<div class="row sidebar_bg radius10" id="page">
+<div class="row sidebar_bg" id="page">
 	<div class="nine columns wrapper offset-topgutter push-three">	
 		<section class="content">
  			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> <!--Start the loop -->

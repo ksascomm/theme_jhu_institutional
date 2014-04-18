@@ -14,7 +14,6 @@
   <!-- CSS Files: All pages -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/min.foundation.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/flagship.css">
-<!--   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/pilot.css"> -->
   <script async type="text/javascript" src="http://fast.fonts.net/jsapi/c5f514c7-d786-4bfb-9484-ea6c8fbd263f.js"></script>
   <!-- CSS Files: Conditionals -->
   
@@ -29,14 +28,15 @@
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/lte-ie7.js"></script>
   <![endif]-->
-  <?php include_once("parts-analytics.php"); ?>
+  <?php get_template_part('parts', 'analytics'); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<header class="black_bg">
+<?php $theme_option = flagship_sub_get_global_options(); $color_scheme = $theme_option['flagship_sub_color_scheme']; ?>
+<body <?php body_class($color_scheme); ?>>	
+	<header>
 		<div class="row show-for-small">
-			<div class="four columns centered black_bg">
-			<div class="mobile-logo centered"><a href="<?php echo network_site_url(); ?>">Home</a></div>
+			<div class="four columns centered black_bg" id="mobile-head">
+			<div class="mobile-logo centered"><a href="http://www.jhu.edu">Home</a></div>
 			<h2 class="white" align="center"><?php echo get_bloginfo( 'title' ); ?></h2>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 		</div>
 		<div class="row">
 			<div class="twelve columns hide-for-small" id="logo_nav">
-				<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">Krieger School of Arts & Sciences</a></li>
+				<li class="logo"><a href="http://www.jhu.edu" title="Johns Hopkins University">Johns Hopkins University</a></li>
 				
 				<a href="<?php echo site_url(); ?>"><h1 class="white"><span class="small"><?php echo get_bloginfo ( 'description' ); ?></span>
 					<?php echo get_bloginfo( 'title' ); ?></h1></a>

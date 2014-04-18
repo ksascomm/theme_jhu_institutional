@@ -12,7 +12,7 @@ Template Name: Full Width - No Sidebar
 				<h2><?php the_title();?></h2>
 					<?php if ( has_post_thumbnail()) { ?> 
 						<div class="photo-page-left floatleft seven columns">
-							<?php the_post_thumbnail('full',array('class'	=> "radius-topleft")); ?>
+							<?php the_post_thumbnail('full'); ?>
 						</div>
 					<?php } ?>
 				<?php the_content(); ?>

@@ -5,7 +5,7 @@ Template Name: Bulletin Board - Graduate
 ?>
 
 <?php get_header(); ?>
-<div class="row sidebar_bg radius10" id="page">
+<div class="row sidebar_bg" id="page">
 	<div class="nine columns wrapper offset-topgutter push-three">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<section class="content">

@@ -1,7 +1,7 @@
 /******* Fonts ************/
 body {
 	font-family:"Myriad W01 Regular",Arial,sans-serif;
-	background:#e2e1df;
+	background:#FFF;
 }
 
 h1,h2,h3,h4,h5,h6,.semibold,table thead tr th,table tfoot tr td {
@@ -42,7 +42,7 @@ strong,b,.bold {
 }
 p {
 	line-height:1.3em;
-	color:#333;
+	color:#2c2c33;
 }
 
 .content p {
@@ -65,7 +65,7 @@ p {
 
 h6,time {
 	font-size:10px;
-	color:#666;
+	color:#4a484c;
 	font-family:"Myriad W01 Bd";
 	text-transform:uppercase;
 	letter-spacing:2px;
@@ -81,17 +81,292 @@ ol {
 	margin-bottom:14px;
 }
 
-.divider,
-hr {
-	width:100%;
-	height:3px;
-	margin-bottom: 1.6em;
-	border-bottom: ridge 5px #fafafa;
 
-}
 
 .tabs.pill dd, .tabs.pill li {
 	margin-bottom: 7px;
+}
+
+/*********COLORS-BG*************/
+body.black header, body.black #sidebar_header, body.black #site_title,  body.black .widget_title, body.black #main_nav ul li ul li:hover, body.black #mobile-header, body .button, body.black #caption, body.black #mobile-head, body.black #quicklinks li.has-flyout {
+	background: #2c2c33;
+}
+
+body.blue header, body.blue #sidebar_header, body.blue #site_title, body.blue .widget_title, .button.french, body.blue #main_nav ul li ul li:hover, body.blue #mobile-header, body.blue .button, body.blue #caption, body.blue #mobile-head, body.blue #quicklinks li.has-flyout{
+	background: #418FDE;
+}
+
+body.green header, body.green #sidebar_header, body.green #site_title, body.green .widget_title, .button.german, body.green #main_nav ul li ul li:hover, body.green #mobile-header, body.green .button, body.green #caption, body.green #mobile-head, body.green #quicklinks li.has-flyout{
+	background: #007a53;
+}
+
+body.red header, body.red #sidebar_header, body.red #site_title, body.red .widget_title, .button.hebrew, body.red #main_nav ul li ul li:hover, body.red #mobile-header, body.red .button, body.red #caption, body.red #mobile-head, body.red #quicklinks li.has-flyout{
+	background: #8a2a2b;
+}
+
+body.orange header, body.orange #sidebar_header, body.orange #site_title, body.orange .widget_title, .button.italian, body.orange #main_nav ul li ul li:hover, body.orange #mobile-header, body.orange .button, body.orange #caption, body.orange #mobile-head, body.orange #quicklinks li.has-flyout {
+	background: #cf4520;
+}
+
+body.mint header, body.mint #sidebar_header, body.mint #site_title, body.mint .widget_title, .button.portuguese, body.mint #main_nav ul li ul li:hover, body.mint #mobile-header, body.mint .button, body.mint #caption, body.mint #mobile-head, body.mint #quicklinks li.has-flyout {
+	background: #00ab8e;
+}
+
+body.purple header, body.purple #sidebar_header, body.purple #site_title, body.purple .widget_title, .button.spanish, body.purple #main_nav ul li ul li:hover, body.purple #mobile-header, body.purple .button, body.purple #caption, body.purple #mobile-head, body.purple #quicklinks li.has-flyout {
+	background: #8e3a80;
+}
+
+/*********COLORS-FONTS*************/
+body h1, body h2, body h3, body h4, body h5, body h6, body .semibold, body table thead tr th, body table tfoot tr td, body .sidebar_bg ul.nav li a, body #sidebar li a, body #sidebar li.external a::after, .panel.callout a {
+	color: #2c2c33;
+}
+body.blue h1, body.blue h2, body.blue h3, body.blue h4, body.blue h5, body.blue h6, body.blue .semibold, body.blue table thead tr th, body.blue table tfoot tr td, body.blue a, body.blue .sidebar_bg ul.nav li a, body.blue #sidebar li a, body.blue #sidebar li.external a::after, body.blue .panel.callout a {
+	color: #418FDE;
+}
+
+body.green h1, body.green h2, body.green h3, body.green h4, body.green h5, body.green h6, body.green .semibold, body.green table thead tr th, body.green table tfoot tr td, body.green a, body.green .sidebar_bg ul.nav li a, body.green #sidebar li a, body.green #sidebar li.external a::after, body.green .panel.callout a {
+	color: #007a53;
+}
+
+body.red h1, body.red h2, body.red h3, body.red h4, body.red h5, body.red h6, body.red .semibold, body.red table thead tr th, body.red table tfoot tr td, body.red a, body.red .sidebar_bg ul.nav li a, body.red #sidebar li a, body.red #sidebar li.external a::after, body.red .panel.callout a {
+	color: #8a2a2b;
+}
+
+body.orange h1, body.orange h2, body.orange h3, body.orange h4, body.orange h5, body.orange h6, body.orange .semibold, body.orange table thead tr th, body.orange table tfoot tr td, body.orange a, body.orange .sidebar_bg ul.nav li a, body.orange #sidebar li a, body.orange #sidebar li.external a::after, body.orange .panel.callout a {
+	color: #cf4520;
+}
+
+body.mint h1, body.mint h2, body.mint h3, body.mint h4, body.mint h5, body.mint h6, body.mint .semibold, body.mint table thead tr th, body.mint table tfoot tr td, body.mint a, body.mint .sidebar_bg ul.nav li a, body.mint #sidebar li a, body.mint #sidebar li.external a::after, body.mint .panel.callout a {
+	color: #00ab8e;
+}
+
+body.purple h1, body.purple h2, body.purple h3, body.purple h4, body.purple h5, body.purple h6, body.purple .semibold, body.purple table thead tr th, body.purple table tfoot tr td, body.purple a, body.purple .sidebar_bg ul.nav li a, body.purple #sidebar li a, body.purple #sidebar li.external a::after, body.purple .panel.callout a {
+	color: #8e3a80;
+}
+
+/*********COLORS-NAVIGATION*************/
+#main_nav ul li:hover, #main_nav li.active, #main_nav li.current_page_parent, #main_nav li.current_page_ancestor, #main_nav ul li.current_page_item, #main_nav ul li:hover ul, #main_nav ul li a:hover ul, #main_nav ul li.current_page_ancestor ul, #main_nav ul li.current_page_item ul, #main_nav ul .flyout, body #slide, .mean-bar {
+	background: #000;
+}
+
+body.blue #main_nav ul li:hover, body.blue #main_nav li.active, body.blue #main_nav li.current_page_parent, body.blue #main_nav li.current_page_ancestor, body.blue #main_nav ul li.current_page_item, body.blue #main_nav ul li:hover ul, body.blue #main_nav ul li a:hover ul, body.blue #main_nav ul li.current_page_ancestor ul, body.blue #main_nav ul li.current_page_item ul, body.blue #main_nav ul .flyout, body.blue ul.flyout li a, body.blue #slide, body.blue .mean-bar, body.blue #caption .button {
+	background: #306ba6;
+}
+body.green #main_nav ul li:hover, body.green #main_nav li.active, body.green #main_nav li.current_page_parent, body.green #main_nav li.current_page_ancestor, body.green #main_nav ul li.current_page_item, body.green #main_nav ul li:hover ul, body.green #main_nav ul li a:hover ul, body.green #main_nav ul li.current_page_ancestor ul, body.green #main_nav ul li.current_page_item ul, body.green #main_nav ul .flyout, body.green ul.flyout li a, body.green #slide, body.green .mean-bar, body.green #caption .button {
+	background: #005b3e;
+}
+
+body.red #main_nav ul li:hover, body.red #main_nav li.active, body.red #main_nav li.current_page_parent, body.red #main_nav li.current_page_ancestor, body.red #main_nav ul li.current_page_item, body.red #main_nav ul li:hover ul, body.red #main_nav ul li a:hover ul, body.red #main_nav ul li.current_page_ancestor ul, body.red #main_nav ul li.current_page_item ul, body.red #main_nav ul .flyout, body.red ul.flyout li a, body.red #slide, body.red .mean-bar, body.red #caption .button {
+	background: #671f20;
+}
+
+body.orange #main_nav ul li:hover, body.orange #main_nav li.active, body.orange #main_nav li.current_page_parent, body.orange #main_nav li.current_page_ancestor, body.orange #main_nav ul li.current_page_item, body.orange #main_nav ul li:hover ul, body.orange #main_nav ul li a:hover ul, body.orange #main_nav ul li.current_page_ancestor ul, body.orange #main_nav ul li.current_page_item ul, body.orange #main_nav ul .flyout, body.orange ul.flyout li a, body.orange #slide, body.orange .mean-bar, body.orange #caption .button {
+	background: #9b3318;
+}
+
+body.mint #main_nav ul li:hover, body.mint #main_nav li.active, body.mint #main_nav li.current_page_parent, body.mint #main_nav li.current_page_ancestor, body.mint #main_nav ul li.current_page_item, body.mint #main_nav ul li:hover ul, body.mint #main_nav ul li a:hover ul, body.mint #main_nav ul li.current_page_ancestor ul, body.mint #main_nav ul li.current_page_item ul, body.mint #main_nav ul .flyout, body.mint ul.flyout li a, body.mint #slide, body.mint .mean-bar, body.mint #caption .button {
+	background: #00806a;
+}
+
+body.purple #main_nav ul li:hover, body.purple #main_nav li.active, body.purple #main_nav li.current_page_parent, body.purple #main_nav li.current_page_ancestor, body.purple #main_nav ul li.current_page_item, body.purple #main_nav ul li:hover ul, body.purple #main_nav ul li a:hover ul, body.purple #main_nav ul li.current_page_ancestor ul, body.purple #main_nav ul li.current_page_item ul, body.purple #main_nav ul .flyout, body.purple ul.flyout li a, body.purple #slide, body.purple .mean-bar, body.purple #caption .button {
+	background: #6a2b60;
+}
+
+/*********BORDERS & PANELS*************/
+body .callout.panel {
+   background: #d9c89e;
+	background: rgba(217,200,158,.3);	
+}
+
+/*********ACCORDION & TABS BORDERS*************/
+body ul.accordion > li.active, body .tabs dd.active, body .tabs li.active{
+    border-top: 3px solid #2c2c33;
+}
+body.blue ul.accordion > li.active, body.blue .tabs dd.active, body.blue .tabs li.active{
+    border-top: 3px solid #418FDE;
+}
+body.green ul.accordion > li.active, body.green .tabs dd.active, body.green .tabs li.active {
+    border-top: 3px solid #007a53;
+}
+body.red ul.accordion > li.active, body.red .tabs dd.active, body.red .tabs li.active {
+    border-top: 3px solid #8a2a2b;
+}
+body.orange ul.accordion > li.active, body.orange .tabs dd.active, body.orange .tabs li.active {
+    border-top: 3px solid #cf4520;
+}
+body.mint ul.accordion > li.active, body.mint .tabs dd.active, body.mint .tabs li.active {
+    border-top: 3px solid #00ab8e;
+}
+body.purple ul.accordion > li.active, body.purple .tabs dd.active, body.purple .tabs li.active {
+    border-top: 3px solid #8e3a80;
+}
+
+
+/******BABY BLUE****/
+body.babyblue header, body.babyblue #sidebar_header, body.babyblue #site_title, body.babyblue .widget_title, .button.spanish, body.babyblue #main_nav ul li ul li:hover, body.babyblue #mobile-header, body.babyblue .button, body.babyblue #caption, body.babyblue #mobile-head, body.babyblue #quicklinks li.has-flyout {
+	background: #6399ae;
+}
+
+body.babyblue h1, body.babyblue h2, body.babyblue h3, body.babyblue h4, body.babyblue h5, body.babyblue h6, body.babyblue .semibold, body.babyblue table thead tr th, body.babyblue table tfoot tr td, body.babyblue a, body.babyblue .sidebar_bg ul.nav li a, body.babyblue #sidebar li a, body.babyblue #sidebar li.external a::after, body.babyblue .panel.callout a {
+	color: #6399ae;
+}
+
+body.babyblue #main_nav ul li:hover, body.babyblue #main_nav li.active, body.babyblue #main_nav li.current_page_parent, body.babyblue #main_nav li.current_page_ancestor, body.babyblue #main_nav ul li.current_page_item, body.babyblue #main_nav ul li:hover ul, body.babyblue #main_nav ul li a:hover ul, body.babyblue #main_nav ul li.current_page_ancestor ul, body.babyblue #main_nav ul li.current_page_item ul, body.babyblue #main_nav ul .flyout, body.babyblue ul.flyout li a, body.babyblue #slide, body.babyblue .mean-bar, body.babyblue #caption .button {
+	background: #4a7282;
+}
+
+body.babyblue ul.accordion > li.active, body.babyblue .tabs dd.active, body.babyblue .tabs li.active {
+    border-top: 3px solid #6399ae;
+}
+
+/*****LAVENDAR********/
+body.lavender header, body.lavender #sidebar_header, body.lavender #site_title, body.lavender .widget_title, .button.spanish, body.lavender #main_nav ul li ul li:hover, body.lavender #mobile-header, body.lavender .button, body.lavender #caption, body.lavender #mobile-head, body.lavender #quicklinks li.has-flyout {
+	background: #86647a;
+}
+
+body.lavender h1, body.lavender h2, body.lavender h3, body.lavender h4, body.lavender h5, body.lavender h6, body.lavender .semibold, body.lavender table thead tr th, body.lavender table tfoot tr td, body.lavender a, body.lavender .sidebar_bg ul.nav li a, body.lavender #sidebar li a, body.lavender #sidebar li.external a::after, body.lavender .panel.callout a {
+	color: #86647a;
+}
+
+body.lavender #main_nav ul li:hover, body.lavender #main_nav li.active, body.lavender #main_nav li.current_page_parent, body.lavender #main_nav li.current_page_ancestor, body.lavender #main_nav ul li.current_page_item, body.lavender #main_nav ul li:hover ul, body.lavender #main_nav ul li a:hover ul, body.lavender #main_nav ul li.current_page_ancestor ul, body.lavender #main_nav ul li.current_page_item ul, body.lavender #main_nav ul .flyout, body.lavender ul.flyout li a, body.lavender #slide, body.lavender .mean-bar, body.lavender #caption .button {
+	background: #644b5b;
+}
+
+body.lavender ul.accordion > li.active, body.lavender .tabs dd.active, body.lavender .tabs li.active {
+    border-top: 3px solid #86647a;
+}
+
+/********NAVY**********/
+body.navy header, body.navy #sidebar_header, body.navy #site_title, body.navy .widget_title, .button.spanish, body.navy #main_nav ul li ul li:hover, body.navy #mobile-header, body.navy .button, body.navy #caption, body.navy #mobile-head, body.navy #quicklinks li.has-flyout {
+	background: #003d4c;
+}
+
+body.navy h1, body.navy h2, body.navy h3, body.navy h4, body.navy h5, body.navy h6, body.navy .semibold, body.navy table thead tr th, body.navy table tfoot tr td, body.navy a, body.navy .sidebar_bg ul.nav li a, body.navy #sidebar li a, body.navy #sidebar li.external a::after, body.navy .panel.callout a {
+	color: #003d4c;
+}
+
+body.navy #main_nav ul li:hover, body.navy #main_nav li.active, body.navy #main_nav li.current_page_parent, body.navy #main_nav li.current_page_ancestor, body.navy #main_nav ul li.current_page_item, body.navy #main_nav ul li:hover ul, body.navy #main_nav ul li a:hover ul, body.navy #main_nav ul li.current_page_ancestor ul, body.navy #main_nav ul li.current_page_item ul, body.navy #main_nav ul .flyout, body.navy ul.flyout li a, body.navy #slide, body.navy .mean-bar, body.navy #caption .button {
+	background: #002d39;
+}
+
+body.navy ul.accordion > li.active, body.navy .tabs dd.active, body.navy .tabs li.active {
+    border-top: 3px solid #003d4c;
+}
+
+/**********ARMYGREEN************/
+body.armygreen header, body.armygreen #sidebar_header, body.armygreen #site_title, body.armygreen .widget_title, .button.spanish, body.armygreen #main_nav ul li ul li:hover, body.armygreen #mobile-header, body.armygreen .button, body.armygreen #caption, body.armygreen #mobile-head, body.armygreen #quicklinks li.has-flyout {
+	background: #4e5b31;
+}
+
+body.armygreen h1, body.armygreen h2, body.armygreen h3, body.armygreen h4, body.armygreen h5, body.armygreen h6, body.armygreen .semibold, body.armygreen table thead tr th, body.armygreen table tfoot tr td, body.armygreen a, body.armygreen .sidebar_bg ul.nav li a, body.armygreen #sidebar li a, body.armygreen #sidebar li.external a::after, body.armygreen .panel.callout a {
+	color: #4e5b31;
+}
+
+body.armygreen #main_nav ul li:hover, body.armygreen #main_nav li.active, body.armygreen #main_nav li.current_page_parent, body.armygreen #main_nav li.current_page_ancestor, body.armygreen #main_nav ul li.current_page_item, body.armygreen #main_nav ul li:hover ul, body.armygreen #main_nav ul li a:hover ul, body.armygreen #main_nav ul li.current_page_ancestor ul, body.armygreen #main_nav ul li.current_page_item ul, body.armygreen #main_nav ul .flyout, body.armygreen ul.flyout li a, body.armygreen #slide, body.armygreen .mean-bar, body.armygreen #caption .button {
+	background: #3a4424;
+}
+
+body.armygreen ul.accordion > li.active, body.armygreen .tabs dd.active, body.armygreen .tabs li.active {
+    border-top: 3px solid #4e5b31;
+}
+
+/***********SLATE************/
+body.slate header, body.slate #sidebar_header, body.slate #site_title, body.slate .widget_title, .button.spanish, body.slate #main_nav ul li ul li:hover, body.slate #mobile-header, body.slate .button, body.slate #caption, body.slate #mobile-head, body.slate #quicklinks li.has-flyout {
+	background: #4a484c;
+}
+
+body.slate h1, body.slate h2, body.slate h3, body.slate h4, body.slate h5, body.slate h6, body.slate .semibold, body.slate table thead tr th, body.slate table tfoot tr td, body.slate a, body.slate .sidebar_bg ul.nav li a, body.slate #sidebar li a, body.slate #sidebar li.external a::after, body.slate .panel.callout a {
+	color: #4a484c;
+}
+
+body.slate #main_nav ul li:hover, body.slate #main_nav li.active, body.slate #main_nav li.current_page_parent, body.slate #main_nav li.current_page_ancestor, body.slate #main_nav ul li.current_page_item, body.slate #main_nav ul li:hover ul, body.slate #main_nav ul li a:hover ul, body.slate #main_nav ul li.current_page_ancestor ul, body.slate #main_nav ul li.current_page_item ul, body.slate #main_nav ul .flyout, body.slate ul.flyout li a, body.slate #slide, body.slate .mean-bar, body.slate #caption .button {
+	background: #373639;
+}
+
+body.slate ul.accordion > li.active, body.slate .tabs dd.active, body.slate .tabs li.active {
+    border-top: 3px solid #4a484c;
+}
+
+/**********PLUM**********/
+body.plum header, body.plum #sidebar_header, body.plum #site_title, body.plum .widget_title, .button.spanish, body.plum #main_nav ul li ul li:hover, body.plum #mobile-header, body.plum .button, body.plum #caption, body.plum #mobile-head, body.plum #quicklinks li.has-flyout {
+	background: #6f2c3f;
+}
+
+body.plum h1, body.plum h2, body.plum h3, body.plum h4, body.plum h5, body.plum h6, body.plum .semibold, body.plum table thead tr th, body.plum table tfoot tr td, body.plum a, body.plum .sidebar_bg ul.nav li a, body.plum #sidebar li a, body.plum #sidebar li.external a::after, body.plum .panel.callout a {
+	color: #6f2c3f;
+}
+
+body.plum #main_nav ul li:hover, body.plum #main_nav li.active, body.plum #main_nav li.current_page_parent, body.plum #main_nav li.current_page_ancestor, body.plum #main_nav ul li.current_page_item, body.plum #main_nav ul li:hover ul, body.plum #main_nav ul li a:hover ul, body.plum #main_nav ul li.current_page_ancestor ul, body.plum #main_nav ul li.current_page_item ul, body.plum #main_nav ul .flyout, body.plum ul.flyout li a, body.plum #slide, body.plum .mean-bar, body.plum #caption .button {
+	background: #53212f;
+}
+
+body.plum ul.accordion > li.active, body.plum .tabs dd.active, body.plum .tabs li.active {
+    border-top: 3px solid #6f2c3f;
+}
+
+/***********GRASS*************/
+body.grass header, body.grass #sidebar_header, body.grass #site_title, body.grass .widget_title, .button.spanish, body.grass #main_nav ul li ul li:hover, body.grass #mobile-header, body.grass .button, body.grass #caption, body.grass #mobile-head, body.grass #quicklinks li.has-flyout {
+	background: #74aa50;
+}
+
+body.grass h1, body.grass h2, body.grass h3, body.grass h4, body.grass h5, body.grass h6, body.grass .semibold, body.grass table thead tr th, body.grass table tfoot tr td, body.grass a, body.grass .sidebar_bg ul.nav li a, body.grass #sidebar li a, body.grass #sidebar li.external a::after, body.grass .panel.callout a {
+	color: #74aa50;
+}
+
+body.grass #main_nav ul li:hover, body.grass #main_nav li.active, body.grass #main_nav li.current_page_parent, body.grass #main_nav li.current_page_ancestor, body.grass #main_nav ul li.current_page_item, body.grass #main_nav ul li:hover ul, body.grass #main_nav ul li a:hover ul, body.grass #main_nav ul li.current_page_ancestor ul, body.grass #main_nav ul li.current_page_item ul, body.grass #main_nav ul .flyout, body.grass ul.flyout li a, body.grass #slide, body.grass .mean-bar, body.grass #caption .button {
+	background: #577f3c;
+}
+
+body.grass ul.accordion > li.active, body.grass .tabs dd.active, body.grass .tabs li.active {
+    border-top: 3px solid #74aa50;
+}
+/****************FOREST***********/
+body.forest header, body.forest #sidebar_header, body.forest #site_title, body.forest .widget_title, .button.spanish, body.forest #main_nav ul li ul li:hover, body.forest #mobile-header, body.forest .button, body.forest #caption, body.forest #mobile-head, body.forest #quicklinks li.has-flyout {
+	background: #007a53;
+}
+
+body.forest h1, body.forest h2, body.forest h3, body.forest h4, body.forest h5, body.forest h6, body.forest .semibold, body.forest table thead tr th, body.forest table tfoot tr td, body.forest a, body.forest .sidebar_bg ul.nav li a, body.forest #sidebar li a, body.forest #sidebar li.external a::after, body.forest .panel.callout a {
+	color: #007a53;
+}
+
+body.forest #main_nav ul li:hover, body.forest #main_nav li.active, body.forest #main_nav li.current_page_parent, body.forest #main_nav li.current_page_ancestor, body.forest #main_nav ul li.current_page_item, body.forest #main_nav ul li:hover ul, body.forest #main_nav ul li a:hover ul, body.forest #main_nav ul li.current_page_ancestor ul, body.forest #main_nav ul li.current_page_item ul, body.forest #main_nav ul .flyout, body.forest ul.flyout li a, body.forest #slide, body.forest .mean-bar, body.forest #caption .button {
+	background: #005b3e;
+}
+
+body.forest ul.accordion > li.active, body.forest .tabs dd.active, body.forest .tabs li.active {
+    border-top: 3px solid #007a53;
+}
+/************GOLD***********/
+body.gold header, body.gold #sidebar_header, body.gold #site_title, body.gold .widget_title, .button.spanish, body.gold #main_nav ul li ul li:hover, body.gold #mobile-header, body.gold .button, body.gold #caption, body.gold #mobile-head, body.gold #quicklinks li.has-flyout {
+	background: #cba052;
+}
+
+body.gold h1, body.gold h2, body.gold h3, body.gold h4, body.gold h5, body.gold h6, body.gold .semibold, body.gold table thead tr th, body.gold table tfoot tr td, body.gold a, body.gold .sidebar_bg ul.nav li a, body.gold #sidebar li a, body.gold #sidebar li.external a::after, body.gold .panel.callout a {
+	color: #cba052;
+}
+
+body.gold #main_nav ul li:hover, body.gold #main_nav li.active, body.gold #main_nav li.current_page_parent, body.gold #main_nav li.current_page_ancestor, body.gold #main_nav ul li.current_page_item, body.gold #main_nav ul li:hover ul, body.gold #main_nav ul li a:hover ul, body.gold #main_nav ul li.current_page_ancestor ul, body.gold #main_nav ul li.current_page_item ul, body.gold #main_nav ul .flyout, body.gold ul.flyout li a, body.gold #slide, body.gold .mean-bar, body.gold #caption .button {
+	background: #98783d;
+}
+
+body.gold ul.accordion > li.active, body.gold .tabs dd.active, body.gold .tabs li.active {
+    border-top: 3px solid #cba052;
+}
+/*********SIENNA***********/
+body.sienna header, body.sienna #sidebar_header, body.sienna #site_title, body.sienna .widget_title, .button.spanish, body.sienna #main_nav ul li ul li:hover, body.sienna #mobile-header, body.sienna .button, body.sienna #caption, body.sienna #mobile-head, body.sienna #quicklinks li.has-flyout {
+	background: #9e5330;
+}
+
+body.sienna h1, body.sienna h2, body.sienna h3, body.sienna h4, body.sienna h5, body.sienna h6, body.sienna .semibold, body.sienna table thead tr th, body.sienna table tfoot tr td, body.sienna a, body.sienna .sidebar_bg ul.nav li a, body.sienna #sidebar li a, body.sienna #sidebar li.external a::after, body.sienna .panel.callout a {
+	color: #9e5330;
+}
+
+body.sienna #main_nav ul li:hover, body.sienna #main_nav li.active, body.sienna #main_nav li.current_page_parent, body.sienna #main_nav li.current_page_ancestor, body.sienna #main_nav ul li.current_page_item, body.sienna #main_nav ul li:hover ul, body.sienna #main_nav ul li a:hover ul, body.sienna #main_nav ul li.current_page_ancestor ul, body.sienna #main_nav ul li.current_page_item ul, body.sienna #main_nav ul .flyout, body.sienna ul.flyout li a, body.sienna #slide, body.sienna .mean-bar, body.sienna #caption .button {
+	background: #763e24;
+}
+
+body.sienna ul.accordion > li.active, body.sienna .tabs dd.active, body.sienna .tabs li.active {
+    border-top: 3px solid #9e5330;
 }
 
 /******* Reusable Classes ************/
@@ -102,24 +377,24 @@ hr {
 }
 
 .sidebar_bg {
-	background: rgb(237,237,237);
-	background: -moz-linear-gradient(left,  rgb(237,237,237) 0%, rgb(237,237,237) 25%, rgb(226,225,223) 25.1%, rgb(226,225,223) 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(237,237,237)), color-stop(25%,rgb(237,237,237)), color-stop(25.1%,rgb(226,225,223)), color-stop(100%,rgb(226,225,223)));
-	background: -webkit-linear-gradient(left,  rgb(237,237,237) 0%,rgb(237,237,237) 25%,rgb(226,225,223) 25.1%,rgb(226,225,223) 100%);
-	background: -o-linear-gradient(left,  rgb(237,237,237) 0%,rgb(237,237,237) 25%,rgb(226,225,223) 25.1%,rgb(226,225,223) 100%);
-	background: -ms-linear-gradient(left,  rgb(237,237,237) 0%,rgb(237,237,237) 25%,rgb(226,225,223) 25.1%,rgb(226,225,223) 100%);
-	background: linear-gradient(to right,  rgb(237,237,237) 0%,rgb(237,237,237) 25%,rgb(226,225,223) 25.1%,rgb(226,225,223) 100%);
+	background: rgb(229,226,224);
+	background: -moz-linear-gradient(left,  rgb(229,226,224) 0%, rgb(229,226,224) 25%, rgb(255,255,255) 25.1%, rgb(255,255,255) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(229,226,224)), color-stop(25%,rgb(229,226,224)), color-stop(25.1%,rgb(255,255,255)), color-stop(100%,rgb(255,255,255)));
+	background: -webkit-linear-gradient(left,  rgb(229,226,224) 0%,rgb(229,226,224) 25%,rgb(255,255,255) 25.1%,rgb(255,255,255) 100%);
+	background: -o-linear-gradient(left,  rgb(229,226,224) 0%,rgb(229,226,224) 25%,rgb(255,255,255) 25.1%,rgb(255,255,255) 100%);
+	background: -ms-linear-gradient(left,  rgb(229,226,224) 0%,rgb(229,226,224) 25%,rgb(255,255,255) 25.1%,rgb(255,255,255) 100%);
+	background: linear-gradient(to right,  rgb(229,226,224) 0%,rgb(229,226,224) 25%,rgb(255,255,255) 25.1%,rgb(255,255,255) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#e2e1df',GradientType=1 );
 }
 
 .homepage_bg {
-	background: rgb(226,225,223);
-	background: -moz-linear-gradient(left,  rgb(226,225,223) 0%, rgb(226,225,223) 66.0%, rgb(198,197,195) 66.1%, rgb(198,197,195) 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(226,225,223)), color-stop(66.0%,rgb(226,225,223)), color-stop(66.1%,rgb(198,197,195)), color-stop(100%,rgb(198,197,195)));
-	background: -webkit-linear-gradient(left,  rgb(226,225,223) 0%,rgb(226,225,223) 66.0%,rgb(198,197,195) 66.1%,rgb(198,197,195) 100%);
-	background: -o-linear-gradient(left,  rgb(226,225,223) 0%,rgb(226,225,223) 66.0%,rgb(198,197,195) 66.1%,rgb(198,197,195) 100%);
-	background: -ms-linear-gradient(left,  rgb(226,225,223) 0%,rgb(226,225,223) 66.0%,rgb(198,197,195) 66.1%,rgb(198,197,195) 100%);
-	background: linear-gradient(to right,  rgb(226,225,223) 0%,rgb(226,225,223) 66.0%,rgb(198,197,195) 66.1%,rgb(198,197,195) 100%);
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(left,  rgb(255,255,255) 0%, rgb(255,255,255) 66.0%, rgb(229,226,224) 66.1%, rgb(229,226,224) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(255,255,255)), color-stop(66.0%,rgb(255,255,255)), color-stop(66.1%,rgb(229,226,224)), color-stop(100%,rgb(229,226,224)));
+	background: -webkit-linear-gradient(left,  rgb(255,255,255) 0%,rgb(255,255,255) 66.0%,rgb(229,226,224) 66.1%,rgb(229,226,224) 100%);
+	background: -o-linear-gradient(left,  rgb(255,255,255) 0%,rgb(255,255,255) 66.0%,rgb(229,226,224) 66.1%,rgb(229,226,224) 100%);
+	background: -ms-linear-gradient(left,  rgb(255,255,255) 0%,rgb(255,255,255) 66.0%,rgb(229,226,224) 66.1%,rgb(229,226,224) 100%);
+	background: linear-gradient(to right,  rgb(255,255,255) 0%,rgb(255,255,255) 66.0%,rgb(229,226,224) 66.1%,rgb(229,226,224) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e1df', endColorstr='#c6c5c3',GradientType=1 );}
 
 .sidebar_bg .wrapper {
@@ -135,11 +410,11 @@ hr {
 }
 
 .black_bg {
-	background:#333;
+	background:#2c2c33;
 }
 
 .white {
-	color:#FFF;
+	color:#FFF !important;
 }
 
 
@@ -151,11 +426,11 @@ hr {
 	color:#039;
 }
 .black {
-	color:#333 !important;
+	color:#2c2c33 !important;
 }
 
 .grey {
-	color:#999;
+	color:#e5e2e0 !important;
 }
 
 .blue_bg,#SECalendar .SECalendarEventDetails,#SECalendar .SECalendarEventDetails.color1,.color1, .blueslide {
@@ -167,7 +442,7 @@ hr {
 }
 
 .grey_bg,#SECalendar .SECalendarEventDetails.color9,.color9 {
-	background:#666;
+	background:#4a484c;
 }
 
 .rust_bg,#SECalendar .SECalendarEventDetails.color7,.color7 {
@@ -225,7 +500,7 @@ button:hover,.button:hover,.select-buttons li:hover {
 }
 
 button a,button a:hover,button a:visited,.button a,.button a:hover,.button a:visited,.select-buttons li a,.select-buttons li a:hover,.select-buttons li a:visited,.SECalendarPrevMonth a,.SECalendarNextMonth a {
-	color:#fff;
+	color:#fff !important;
 }
 
 .button.radio {
@@ -246,13 +521,12 @@ button a,button a:hover,button a:visited,.button a,.button a:hover,.button a:vis
 	-ms-border-radius:5px;
 	-o-border-radius:5px;
 	border-radius:5px;
-	background-color:#00337f;
 	color:#FFF;
 }
 
 .button a.selected,.button.radio a:hover,.button.radio a.selected {
 	color:#000;
-	text-shadow:1px 1px 1px #FFF;
+	text-shadow:1px 1px 1px #000;
 }
 
 .radius10 {
@@ -261,7 +535,7 @@ button a,button a:hover,button a:visited,.button a,.button a:hover,.button a:vis
 	border-radius:10px;
 }
 
-.radius-left {
+. {
 	-webkit-border-top-left-radius:10px;
 	-webkit-border-bottom-left-radius:10px;
 	-moz-border-radius-topleft:10px;
@@ -362,7 +636,9 @@ ul {
 	list-style:square;
 	line-height:1.4em;
 }
-
+ul.accordion .quicksearch-match {
+	display: none;
+}
 .panel {
 	background:#00337f;
 	border:none;
@@ -390,20 +666,12 @@ ul {
 }
 
 .callout.panel {
-	color:#333;
+	color:#2c2c33;
 	background:#fc6;
-}
-
-.callout.panel a li,.callout.panel li a {
-	color:#333;
 }
 
 .callout.panel p,.callout.panel ul {
 	font-family:"Myriad W01 SmBd",Arial,sans-serif;
-}
-
-.callout.panel h3,.callout.panel li:before,.callout.panel a:hover {
-	color:#633;
 }
 
 .callout.panel h3 {
@@ -645,7 +913,7 @@ nav ul {
 }
 
 .nav-bar > li.has-flyout.is-touch > a.flyout-toggle {
-	border-left:1px dashed #666;
+	border-left:1px dashed #4a484c;
 }
 
 .nav-bar > li > a:first-child {
@@ -664,7 +932,7 @@ nav ul {
 	background:#679bcd;
 	padding:0;
 	margin:0;
-	border:1px solid #38638e;
+	border:none;
 	position:absolute;
 	top:42px;
 	left:0;
@@ -729,12 +997,12 @@ ul.flyout,.nav-bar li ul {
 }
 
 ul.flyout li,.nav-bar li ul li {
-	border-left:solid 1px #38638e;
+	border-left:none;;
 }
 
 ul.flyout li a,.nav-bar li ul li a {
 	background:#679bcd;
-	border:1px solid #38638e;
+	border:none;
 	border-width:1px 1px 0 0;
 	color:#FFF;
 	display:block;
@@ -748,15 +1016,15 @@ ul.flyout li a,.nav-bar li ul li a {
 }
 
 ul.flyout li a:hover,.nav-bar li ul li a:hover {
-	background:#333;
+	background:#2c2c33;
 	background:rgba(255,255,255,.1);
-	color:#333;
+	color:#2c2c33;
 }
 
 ul.flyout li.active,.nav-bar li ul li.active {
 	margin-top:0;
-	border-top:1px solid #4d4d4d;
-	border-left:4px solid #1a1a1a;
+	border-top:1px solid #ccc;
+	border-left:4px solid #ccc;
 }
 
 ul.flyout li.active a,.nav-bar li ul li.active a {
@@ -822,7 +1090,7 @@ li.external a::after {
 }
 
 ul.nav li.external a::after {
-	color:#333;
+	color:#2c2c33;
 }
 
 ul.breadcrumbs {
@@ -832,13 +1100,13 @@ ul.breadcrumbs {
 }
 
 ul.breadcrumbs a {
-	color:#666;
+	color:#4a484c;
 }
 
 /******* Header ************/
 #logo_nav li.logo,.mobile-logo {
 	width:222px;
-	height:162px;
+	height:142px;
 	padding:0;
 	position:absolute;
 	margin-top:-61px;
@@ -853,7 +1121,7 @@ ul.breadcrumbs a {
 #logo_nav li.logo a {
 	background:url(../images/logo.png) no-repeat top;
 	width:182px;
-	height:142px;
+	height:122px;
 	text-indent:-9999px;
 	position:absolute;
 	top:20px;
@@ -862,13 +1130,13 @@ ul.breadcrumbs a {
 
 .mobile-logo {
 	position:relative;
-	height:122px;
+	height:102px;
 }
 
 .mobile-logo a {
 	background:url(../images/logo.png) no-repeat top;
 	width:222px;
-	height:133px;
+	height:113px;
 	margin-top:-61px;
 	text-indent:-9999px;
 	position:absolute;
@@ -895,8 +1163,9 @@ ul.breadcrumbs a {
 }
 
 #logo_nav h1 {
-	margin:30px 0 0 250px;
+	margin:10px 0 0 250px;
 	line-height:1.1em;
+	color: #FFF !important;
 }
 
 #logo_nav h1 span.small {
@@ -905,11 +1174,11 @@ ul.breadcrumbs a {
 }
 
 #search-bar {
-	background:#000;
+	background:#2c2c33;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	border-radius:10px;
-	color:#ccc;
+	color:#b4b2ad;
 	text-transform:uppercase;
 	font-family:"Myriad W01 Bd";
 	margin-top:5px;
@@ -961,7 +1230,7 @@ ul.breadcrumbs a {
 }
 
 #search-bar input[type="submit"] {
-	background:#666;
+	background:#4a484c;
 	height:31px;
 	width:30px;
 	font-family:'flagship-icon';
@@ -979,7 +1248,7 @@ ul.breadcrumbs a {
 }
 
 #nav-break {
-background: #333;
+background: #2c2c33;
 background: -webkit-linear-gradient(top, rgba(102, 102, 102, 0.91) 0%, rgba(50, 50, 50, 0.91) 31%, rgba(47, 47, 47, 0.82) 47%, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.29) 95%, rgba(0, 0, 0, 0.29) 100%);
 background: -o-linear-gradient(top, rgba(102, 102, 102, 0.91) 0%, rgba(50, 50, 50, 0.91) 31%, rgba(47, 47, 47, 0.82) 47%, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.29) 95%, rgba(0, 0, 0, 0.29) 100%);
 background: -ms-linear-gradient(top, rgba(102, 102, 102, 0.91) 0%, rgba(50, 50, 50, 0.91) 31%, rgba(47, 47, 47, 0.82) 47%, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.29) 95%, rgba(0, 0, 0, 0.29) 100%);
@@ -992,7 +1261,7 @@ background: linear-gradient(to bottom, rgba(102, 102, 102, 0.91) 0%, rgba(50, 50
 
 /******* Footer ************/
 footer {
-	background:#000;
+	background:#2c2c33;
 	padding-top:25px;
 }
 
@@ -1006,7 +1275,7 @@ footer a,.inline-list li a {
 
 #social-media a {
 	content:none;
-	color:#333;
+	color:#2c2c33;
 	background:#555;
 	-webkit-border-radius:50%;
 	-moz-border-radius:50%;
@@ -1017,7 +1286,7 @@ footer a,.inline-list li a {
 }
 
 #social-media a:hover {
-	color:#333;
+	color:#2c2c33;
 	background:#CCC;
 }
 #menu-footer-links {
@@ -1099,7 +1368,7 @@ footer a,.inline-list li a {
 
 #quicklinks ul.flyout li a:hover { 
 	background: #ffcc99; 
-	color: #333; 
+	color: #2c2c33; 
 }
 
 #quicklinks .nav-bar > li.has-flyout > a:first-child::after {
@@ -1159,7 +1428,7 @@ aside ul.nav li {
 }
 
 .widget_title h5 {
-	color:#FFF;
+	color:#FFF !important;
 }
 
 ul.nav li ul li {
@@ -1184,7 +1453,7 @@ ul.nav ul.sub-menu {
 
 #sidebar.sidebar-right {
 	padding-top:0;
-	background: #ccc;
+	background: #e5e2e0;
 }
 #sidebar h5 {
 	padding-left:20px;
@@ -1212,7 +1481,7 @@ ul.nav ul.sub-menu {
 }
 
 #widget a p {
-	color: #333;
+	color: #2c2c33;
 }
 
 .label.round {
@@ -1326,7 +1595,7 @@ button.radio {
 }
 
 button.radio a {
-	color:#333;
+	color:#2c2c33;
 	padding:5px;
 }
 
@@ -1341,19 +1610,29 @@ button.radio a.selected,button.radio a:hover {
 }
 
 /******* FIELDS OF STUDY LANDING PAGES ******/
+.mobile-field {margin-bottom: 30px;}
+div.field {
+	background: #d9c89e;
+	background: rgba(217,200,158,.3);
+	padding: 25px 15px;;
+}
+div.field img {
+	height: 175px;
+}
 p.contact {
 	font-size:14px;
 	color:#000;
 }
 
 p.contact span {
-	margin-right:20px;
+	margin-right:5px;
 }
+
+.field span.icon-facebook, .field span.icon-twitter, .field span.icon-mail {margin-right:7px;}
 
 p.contact [class^="icon-"]:before,p.contact [class*=" icon-"]:before {
 	vertical-align:middle;
 	font-size:18px;
-	color:#00337f;
 	margin-right:0;
 }
 
@@ -1384,7 +1663,7 @@ ul.nav:last-child {
 
 .jumpmenu select {
 	background:#00337f;
-	border:#666;
+	border:#4a484c;
 	color:#FFF;
 	font-size:14px;
 	text-indent:15px;
@@ -1444,7 +1723,7 @@ ul.nav:last-child {
 }
 
 #SECalendarListWrapper .SECalendarEventTime,#SECalendarListWrapper .SECalendarEventLocation {
-	color:#333;
+	color:#2c2c33;
 	font-size:10px;
 	font-weight:400;
 	font-family:"Myriad W01 Regular",Arial,sans-serif;
@@ -1553,7 +1832,7 @@ a.rssLink,#SECalendarSearch .SECalendarLocation,#SECalendarSearch .SECalendarKey
 
 p.wp-caption-text {
 	font-size:80%;
-	color:#666;
+	color:#4a484c;
 	text-align:center;
 	max-width:85%;
 }
@@ -1678,7 +1957,7 @@ table.fc-header {
 }
 
 a.button:hover {
-	color: #333;
+	color: #2c2c33;
 } 
 
 /******* Pagination ******/
@@ -1714,9 +1993,9 @@ a.button:hover {
 
 /**************DIRECTORY AND BIO PAGES****************/
 #fields_search fieldset {
-	background: #CCC;
-	background: rgba(0,0,0,0.15);
-	padding-bottom:5px;
+	background: #d9c89e;
+	background: rgba(217,200,158,.3);	
+	padding:15px;
 	border:none;
 }
 
@@ -1737,7 +2016,7 @@ a.button:hover {
     display: inline;
     float:left;
     width:80%;
-    background: #666;
+    background: #4a484c;
 	color:#ccc;
 	font-family:"Myriad W01 It";
 	font-size: 16px;
@@ -1746,7 +2025,7 @@ a.button:hover {
 }
 
 #fields_search input[type="submit"] {
-	background: #333;
+	background: #2c2c33;
 	height: 40px;
 	width: 45px;
 	font-family: 'flagship-icon';
