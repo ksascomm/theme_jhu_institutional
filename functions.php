@@ -249,7 +249,7 @@ function delete_academic_open_transients($post_id) {
 	}
 	switch($post_type) {
 		case 'post' :
-			for ($i=1; $i < 5; $i++)
+			for ($i=1; $i < 5; $i++) 
 			      delete_transient('news_archive_query_' . $i); }
 			   
 			delete_transient('news_query');

@@ -5,7 +5,7 @@ Template Name: Calendar - WP
 ?>
 <?php get_header(); ?>
 <div class="row sidebar_bg radius10" id="page">
-	<div class="nine columns wrapper radius-left offset-topgutter push-three">	
+	<div class="nine columns wrapper offset-topgutter push-three">	
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<section class="content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

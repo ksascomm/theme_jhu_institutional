@@ -58,7 +58,7 @@ if ( false === ( $staff_people_query = get_transient( 'staff_people_query' ) ) )
 ?>
 <?php get_header(); ?>
 <div class="row sidebar_bg radius10" id="page">
-	<div class="nine columns wrapper radius-left offset-topgutter push-three">	
+	<div class="nine columns wrapper offset-topgutter push-three">	
 	<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 	<section class="row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
