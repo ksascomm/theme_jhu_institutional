@@ -1,0 +1,26 @@
+{
+    "name": "ksascomm/jhu_flagship_institutional",
+    "type": "wordpress-theme",
+    "license": "GPL2",
+  	"description": "For sites that cross divisions",
+  	"homepage": "http://github.com/ksascomm/theme_jhu_institutional",
+  	"authors": [
+      {
+      "name": "Tim Gelles",
+      "email": "ksasweb@jhu.edu",
+      "homepage": "http://krieger.jhu.edu"
+      }
+    ],
+    "keywords": [
+      "wordpress"
+    ],
+  "support": {
+    "issues": "http://krieger.jhu.edu"
+  },
+  "require": {
+        "composer/installers": "~1.0"
+    },
+  "replace": {
+        "cpeckens/theme_jhu_institutional": "1.0.*"
+    }
+}
