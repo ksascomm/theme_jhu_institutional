@@ -1,27 +1,75 @@
 /******* Fonts ************/
+
+@font-face {
+  font-family: 'quadon';
+  src: url('../fonts/quadon/Quadon-Medium.eot');
+  src: url('../fonts/quadon/Quadon-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/quadon/Quadon-Medium.woff') format('woff'),
+       url('../fonts/quadon/Quadon-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentona-book';
+  src: url('../fonts/gentona/Gentona-Book.eot');
+  src: url('../fonts/gentona/Gentona-Book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Book.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentona-light';
+  src: url('../fonts/gentona/Gentona-Light.eot');
+  src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Light.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Light.ttf') format('truetype');
+}
+
 body {
-	font-family:"Myriad W01 Regular",Arial,sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 	background:#FFF;
+	font-weight: 300;
+  	font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6,.semibold,table thead tr th,table tfoot tr td {
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+h1, h2 {
+	font-family: 'quadon', Arial, sans-serif;
 	color:#181818;
-	font-weight:400;
+	font-weight: 400;
+	font-style: normal;
 }
 
-em,i,blockquote,blockquote p,.italic {
-	font-family:"Myriad W01 It";
-	font-style:normal;
+h3, h4, h5, h6, .semibold {
+  font-family: 'gentona-book', Arial, sans-serif;
+  color:#181818;
+  font-weight: 400;
+  font-style: normal;
 }
 
-strong,b,.bold {
-	font-family:"Myriad W01 Bd";
-	font-weight:400;
+table thead tr th, table tfoot tr td  {
+	font-family: 'quadon', Arial, sans-serif;
+	color:#181818;
+	font-weight: 400;
+  	font-style: normal;
+}
+
+em, i,
+blockquote,
+blockquote p,
+.italic {
+	font-family: 'gentona-light', Arial, sans-serif;
+   font-weight: 300;
+  font-style: italic;
+}
+
+strong, b,
+.bold {
+font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .b.em,.strong.em {
-	font-family:"Myriad W01 It";
+	font-family: 'quadon', Arial, sans-serif;
 	font-weight:700;
 	font-style:normal;
 }
@@ -66,7 +114,9 @@ p {
 h6,time {
 	font-size:10px;
 	color:#4a484c;
-	font-family:"Myriad W01 Bd";
+	font-family: 'gentona-book', Arial, sans-serif;
+ 	font-weight: 400;
+  	font-style: normal;
 	text-transform:uppercase;
 	letter-spacing:2px;
 	margin-bottom:3px;
@@ -481,7 +531,7 @@ button,.button,.select-buttons li,.SECalendarPrevMonth,.SECalendarNextMonth {
 	-webkit-border-radius:7px;
 	-moz-border-radius:7px;
 	border-radius:7px;
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+	font-family: 'gentona-book', Arial, sans-serif;
 	color:#FFF;
 	font-size:16px;
 	padding:8px 12px;
@@ -671,7 +721,7 @@ ul.accordion .quicksearch-match {
 }
 
 .callout.panel p,.callout.panel ul {
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+	font-family: 'gentona-book', Arial, sans-serif;
 }
 
 .callout.panel h3 {
@@ -1180,7 +1230,7 @@ ul.breadcrumbs a {
 	border-radius:10px;
 	color:#b4b2ad;
 	text-transform:uppercase;
-	font-family:"Myriad W01 Bd";
+	font-family: 'quadon', Arial, sans-serif;
 	margin-top:5px;
 	margin-bottom:10px;
 }
@@ -1321,7 +1371,7 @@ footer a,.inline-list li a {
 
 #quicklinks li.has-flyout {
 	background: #d07b00;
-	font-family:"Myriad W01 Bd";
+	font-family: 'quadon', Arial, sans-serif;
 	color: #FFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -1353,7 +1403,7 @@ footer a,.inline-list li a {
 #quicklinks ul.flyout li a { 
 	background: #f2f2f2; 
 	border-bottom: 1px solid #e6e6e6; 
-	font-family: "Myriad W01 Regular", Arial, sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 	color: #555; 
 	display: block; 
 	font-size: 12px; 
@@ -1472,7 +1522,7 @@ ul.nav ul.sub-menu {
 }
 
 .sidebar_bg ul.nav li a,#sidebar li a {
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+	font-family: 'gentona-book', Arial, sans-serif;
 	color:#369;
 }
 
@@ -1719,14 +1769,14 @@ ul.nav:last-child {
 	color:#000;
 	font-size:20px;
 	margin-bottom:10px;
-	font-family:"Myriad W01 Bd";
+	font-family: 'quadon', Arial, sans-serif;
 }
 
 #SECalendarListWrapper .SECalendarEventTime,#SECalendarListWrapper .SECalendarEventLocation {
 	color:#2c2c33;
 	font-size:10px;
 	font-weight:400;
-	font-family:"Myriad W01 Regular",Arial,sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 	text-transform:uppercase;
 	letter-spacing:1px;
 }
@@ -1735,7 +1785,7 @@ ul.nav:last-child {
 	color:#00337f;
 	font-size:14px;
 	font-weight:400;
-	font-family:"Myriad W01 Regular",Arial,sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 }
 
 #SECalendarListWrapper .SECalendarThumb {
@@ -1743,7 +1793,7 @@ ul.nav:last-child {
 }
 
 .SECalendarEventName h3 {
-	font-family:"Myriad W01 Bd";
+	font-family: 'quadon', Arial, sans-serif;
 	font-size:18px;
 }
 
@@ -1760,7 +1810,7 @@ ul.nav:last-child {
 }
 
 #SECalendarListWrapper .SECalendarPropertyLabel {
-	font-family:"Myriad W01 Bd";
+	font-family: 'quadon', Arial, sans-serif;
 	float:left;
 	margin-right:10px;
 }
@@ -1795,7 +1845,7 @@ a.rssLink,#SECalendarSearch .SECalendarLocation,#SECalendarSearch .SECalendarKey
 }
 
 #SECalendarNav .SECalendarMonth {
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+	font-family: 'gentona-book', Arial, sans-serif;
 	font-size:28px;
 	margin-top:5px;
 }
@@ -2018,7 +2068,7 @@ a.button:hover {
     width:80%;
     background: #4a484c;
 	color:#ccc;
-	font-family:"Myriad W01 It";
+	font-family: 'quadon', Arial, sans-serif;
 	font-size: 16px;
 	border:none;
 
@@ -2129,12 +2179,12 @@ li.person h4 {
 .libra .list-paper a,.libra .list-paper a:link {
 	font-size:14px;
 	color:#000;
-	font-family:"Myriad W01 SmBd",Arial,sans-serif;
+	font-family: 'gentona-book', Arial, sans-serif;
 }
 
 .libra .conference {
 	font-size:12px;
-	font-family:"Myriad W01 Regular",Arial,sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 }
 
 .libra .list-conference a:link,.libra .list-conference a:visited {
@@ -2253,6 +2303,12 @@ div.orbit img.fluid-placeholder {
 .orbit-wrapper {
 	min-height: 394px;
 }
+
+#slider { background: url(spinner.gif) center center #f4f4f4 no-repeat; height: 300px; }
+#slider img { display: none; }
+
+#slider.orbit { background: none; }
+#slider.orbit img { display: block; }
 
 /******* Icons ******/
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
