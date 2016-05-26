@@ -29,6 +29,7 @@ body {
 	background:#FFF;
 	font-weight: 300;
   	font-style: normal;
+  	font-size: 16px;
 }
 
 h1, h2 {
@@ -91,11 +92,23 @@ font-family: 'gentona-book', Arial, sans-serif;
 p {
 	line-height:1.3em;
 	color:#2c2c33;
+	font-size: 16px;
 }
 
 .content p {
 	line-height:1.6em;
 }
+
+.content a {
+    border-bottom: .125em dotted;
+    border-bottom-color: rgba(0,0,0,.2);
+}
+
+.content a:hover, .content a:active {
+      color: #2c2c33;
+      border-bottom-style: solid;
+      font-weight: bold;
+ }
 
 .content img,
 #widget img {
@@ -1462,6 +1475,7 @@ img.featured {
 
 aside li,.wrapper li {
 	margin-left:20px;
+	font-size: 16px;
 }
 
 aside ul.nav li {
