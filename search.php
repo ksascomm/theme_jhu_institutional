@@ -23,7 +23,7 @@ try {
         $resultsPageNum = $_REQUEST['resultsPageNum'];
     }
     $resultsPerPage = 10;
-    $baseQueryURL = 'http://search.johnshopkins.edu/search?&client=ksas_frontend';
+    $baseQueryURL = 'https://search.johnshopkins.edu/search?&client=ksas_frontend';
     $results = $search->query($_REQUEST['q'], $_REQUEST['site'], $baseQueryURL, $resultsPageNum, $resultsPerPage);
     $hits = $results->getNumHits();
     $displayQuery = $results->getDisplayQuery();
