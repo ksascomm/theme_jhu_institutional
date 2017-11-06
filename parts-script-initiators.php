@@ -44,7 +44,7 @@ if ( is_page_template( 'template-people-directory.php' ) && $theme_option['flags
 	    });
 	</script>
 
-<?php } ?> ?>
+<?php } ?>
 
 <!***********SINGLE ITEMS (NEWS & PEOPLE_**************>
 <?php if (  is_singular('post') ) { 

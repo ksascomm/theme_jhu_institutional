@@ -34,9 +34,9 @@
 		
 		<!-- Copyright and Address -->
 		<div class="row" id="copyright" role="content-info">
-  			<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo 
-  			$theme_option = flagship_sub_get_global_options();
-  			$theme_option['flagship_sub_copyright'];?></p>
+  			<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, 
+  				<?php $theme_option = flagship_sub_get_global_options();
+  				echo $theme_option['flagship_sub_copyright'];?></p>
   		</div>
   		<div class="row">
 	  		<div class="four columns centered">
