@@ -45,14 +45,10 @@
 			<div id="search-bar" class="offset-by-seven five mobile-four columns">
 				<div class="row">
 					<div class="six columns mobile-two">
-					<?php $theme_option = flagship_sub_get_global_options(); 
-							$collection_name = $theme_option['flagship_sub_search_collection'];
-					?>
-
-					<form method="GET" action="<?php echo site_url('/search'); ?>">
+					<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
 						<input type="submit" class="icon-search" value="&#xe004;" />
-						<input type="text" name="q" placeholder="Search this site" />
-						<input type="hidden" name="site" value="<?php echo $collection_name; ?>" />
+						<input type="text" name="s" placeholder="Search this site" />
+
 					</form>
 					</div>
 						<?php wp_nav_menu( array( 

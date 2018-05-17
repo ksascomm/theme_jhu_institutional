@@ -1,142 +1,63 @@
 <?php
-/*
-Template Name: Search Results
-*/
-?>
-<?php
-require_once get_template_directory() . "/assets/functions/GoogleSearch.php";
-get_header(); 
-$theme_option = flagship_sub_get_global_options(); 
-$collection_name = $theme_option['flagship_sub_search_collection'];
-?>
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
+ */
+
+get_header(); ?>
 
 <div class="row wrapper radius10">
 	<div class="twelve columns">
-		<h2>Search Results</h2>
-		<section>
-
-<?php 
-try {
-    $search = new KSAS_GoogleSearch();
-    $resultsPageNum = 1;
-    if (array_key_exists('resultsPageNum', $_REQUEST)) {
-        $resultsPageNum = $_REQUEST['resultsPageNum'];
-    }
-    $resultsPerPage = 10;
-    $baseQueryURL = 'https://search.johnshopkins.edu/search?&client=ksas_frontend';
-    $results = $search->query($_REQUEST['q'], $_REQUEST['site'], $baseQueryURL, $resultsPageNum, $resultsPerPage);
-    $hits = $results->getNumHits();
-    $displayQuery = $results->getDisplayQuery();
-    $docTitle = 'Search Results';
-    $sponsored_result = $results->getSponsoredResult();
-    ?>
-
-    <?php
-    if ($hits > 0) {
-        ?>
-       <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
-                    <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <label>Search:</label>
-                        <input type="radio" name="site" value="<?php echo $collection_name; ?>" checked>This site only
-                        <input type="radio" name="site" value="krieger_collection">All of JHU
-                        <input type="submit" class="button blue_bg" value="Search Again" />
-                    </fieldset>
-       </form>        
-       <h6>Results <span class="black"><?php echo $results->getFirstResultNum() ?> - <?php echo $results->getLastResultNum() ?></span> of about <span class="black"><?php echo $hits ?></span></h6>
+		<h1 class="page-title">Search Results: <strong><?php echo esc_attr(get_search_query()); ?></strong></h2>
+        
+        <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+        <article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">
            
-        <?php if (empty($sponsored_result) == false) { ?>
-	        <div class="panel callout radius10" id="sponsored">
-	        	<h6 class="black">Sponsored Result</h6>
-	        	<a href="<?php echo $sponsored_result['sponsored_url']; ?>"><h3><?php echo $sponsored_result['sponsored_title']; ?><small class="italic">-- <?php echo $sponsored_result['sponsored_url']; ?></small></h3></a>
-	        </div>
-         <?php } ?>   
-            <div id="search-results">
-                <ul>
-           
-        <?php
-        while ($result = $results->getNextResult()) {
-            // note what results are PDFs
-            $pdfNote = '';
-            if (preg_match('{application/pdf}', $result['mimeType'])) {
-                $pdfNote = '<span class="black">[PDF]</span> ';
-            }
-            ?>
-                    <li>
-                        <h5><?php echo $pdfNote ?><a href="<?php echo $result['path'] ?>"><?php echo $result['title'] ?></a></h5>
-            <?php
-            if (array_key_exists('description', $result) && $result['description']) {
-                ?>
-                        <p><?php echo $result['description'] ?></p>
-                <?php
-            }
-            ?>
-                        <div class="url"><?php echo $result['path'] ?> - <?php echo $result['sizeHumanReadable'] ?></div>
-                    </li>
-                    <hr>
-            <?php
-        }
-        ?>
-                </ul>
-            </div>
-             
-            <div class="section">
-        <?php
-            $notices = $results->getNotices();
-            foreach ($notices as $notice) {
-                ?>
-                <p class="notice"><?php echo $notice ?></p>
-                <?php
-            }
-        ?>
-                <div class="pagination">
-                     
-        <?php
-        foreach ($results->getResultsetLinks() as $resultsetLink) {
-            print "$resultsetLink ";
-        }
-        ?>
-                    <?php echo $results->getNextLink() ?> 
-                </div>
-                 
-            </div>
-        <?php
-    } else {
-        // no hits
-        ?>
-            </div>
-             
-        <?php
-            $notices = $results->getNotices();
-            foreach ($notices as $notice) {
-                ?>
-            <p class="notice"><?php echo $notice ?></p>
-                <?php
-            }
-        ?>
-             
-            <p style="font-weight: bold;">There are no pages matching your search.</p>
-       <form class="search-form" action="<?php echo site_url('/search'); ?>" method="get">
-                    <fieldset>
-                        <input type="text" class="input-text" name="q" value="<?php echo $displayQuery ?>" />
-                        <label class="inline bold">Search:</label>
-                        <input type="radio" name="site" value="<?php echo $collection_name; ?>" checked>This site only
-                        <input type="radio" name="site" value="krieger_collection">All JHU websites
-                        <input type="submit" class="button blue_bg" value="Search Again" />
-                    </fieldset>
-       </form>        
+                <h3 class="entry-title single-title search-result" itemprop="headline">
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                </h3>
+         
+                            
+            <div class="entry-content" itemprop="articleBody">
+                <?php $content = get_the_content();
+                $trimmed_content = wp_trim_words( $content, 60, '[...]' ); ?>
+                <p><?php echo $trimmed_content; ?></p>
+            </div> <!-- end article section -->
+                                                                    
+        </article> <!-- end article -->
+        <hr>
+        <?php endwhile; ?>
 
         <?php
-    }
-} catch (KSAS_GoogleSearchException $e) {
-    $docTitle = "Search Temporarily Unavailable";
-    ?>
-    <div class="section">
-        <p>We're sorry, the search engine is temporarily unavailable. Please try your search again later.</p>
-    </div>
-    <?php
-} ?>
-		</section>
+            global $wp_query;
+
+            $big = 999999999; // need an unlikely integer
+
+            echo paginate_links( array(
+                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                'format' => '?paged=%#%',
+                'current' => max( 1, get_query_var('paged') ),
+                'total' => $wp_query->max_num_pages
+            ) );
+            ?>
+
+        <?php else : ?>
+                
+         
+            <h3><?php _e('Sorry, No Results.', 'jointswp');?></h3>
+          
+            
+            <section class="entry-content">
+                <p><?php _e('Try your search again.', 'jointswp');?></p>
+            </section>
+                        
+        <?php endif; ?>
 	</div>
 </div>
 
